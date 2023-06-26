@@ -1,0 +1,242 @@
+schema-version: 1
+
+vocabulary:
+  intent:
+    name:
+      type: vocabulary-name
+    key:
+      type: text
+      field: field_key
+  goal:
+    name:
+      type: vocabulary-name
+    key:
+      type: text
+      field: field_key
+  stage:
+    name:
+      type: vocabulary-name
+    key:
+      type: text
+      field: field_key
+  promotion-type:
+    name:
+      type: vocabulary-name
+    key:
+      type: text
+      field: field_key
+
+
+content-block:
+  promotion:
+    name: content-block-name
+    heading:
+      type: text
+      field: field_heading
+
+  personified-data:
+    name: content-block-name
+    heading:  
+      type: text
+      field: field_heading
+
+
+paragraph:
+
+  parameter:
+    
+       
+content-type:
+
+  audience:
+    title: 
+      type: content-type-title
+    introduction: 
+      type: text
+      field: field_summary 
+    thumbnail: 
+      type: media-image
+      field: field_thumbnail           
+    introduction: 
+      type: html
+      field: field_introduction
+    body: 
+      type: html
+      field: body
+    components: 
+      type: paragraphs
+      field: field_components
+    tasks: 
+      type: ref
+      field: field_tasks     
+
+  topic:
+    title: 
+      type: content-type-title
+    introduction: 
+      type: text
+      field: field_summary 
+    thumbnail: 
+      type: media-image
+      field: field_thumbnail           
+    introduction: 
+      type: html
+      field: field_introduction
+    body: 
+      type: html
+      field: body
+    components: 
+      type: paragraphs
+      field: field_components
+
+  page:
+    alias: 
+      type: alias
+    title: 
+      type: content-type-title
+    introduction: 
+      type: text
+      field: field_summary 
+    thumbnail: 
+      type: media-image
+      field: field_thumbnail           
+    introduction: 
+      type: html
+      field: field_introduction
+    body: 
+      type: html
+      field: body
+    components: 
+      type: paragraphs
+      field: field_components
+    topics:
+      type: ref
+      field: field_topics
+    audiences:
+      type: ref
+      field: field_audience
+    intent:
+      type: ref
+      field: field_intent
+    goal:
+      type: ref
+      field: field_goal
+    stage:
+      type: ref
+      field: field_stage
+
+  article:
+    title: 
+      type: content-type-title
+    introduction: 
+      type: text
+      field: field_summary 
+    thumbnail: 
+      type: media-image
+      field: field_thumbnail           
+    introduction: 
+      type: html
+      field: field_introduction
+    body: 
+      type: html
+      field: body
+    components: 
+      type: paragraphs
+      field: field_components
+    topics:
+      type: ref
+      field: field_topics
+    audiences:
+      type: ref
+      field: field_audience
+    authors:
+      type: ref
+      field: field_authors     
+    intent:
+      type: ref
+      field: field_intent
+    goal:
+      type: ref
+      field: field_goal
+
+  event:
+    title: 
+      type: content-type-title
+    introduction: 
+      type: text
+      field: field_summary 
+    thumbnail: 
+      type: media-image
+      field: field_thumbnail           
+    introduction: 
+      type: html
+      field: field_introduction
+    body: 
+      type: html
+      field: body
+    components: 
+      type: paragraphs
+      field: field_components
+    topics:
+      type: ref
+      field: field_topics
+    audiences:
+      type: ref
+      field: field_audience
+    intent:
+      type: ref
+      field: field_intent
+    goal:
+      type: ref
+      field: field_goal
+
+  person:
+    title: 
+      type: content-type-title
+    introduction: 
+      type: text
+      field: field_summary 
+    thumbnail: 
+      type: media-image
+      field: field_thumbnail           
+    introduction: 
+      type: html
+      field: field_introduction
+    body: 
+      type: html
+      field: body
+
+  place:
+    title: 
+      type: content-type-title
+    introduction: 
+      type: text
+      field: field_summary 
+    thumbnail: 
+      type: media-image
+      field: field_thumbnail           
+    introduction: 
+      type: html
+      field: field_introduction
+    body: 
+      type: html
+      field: body
+    components: 
+      type: paragraphs
+      field: field_components
+    topics:
+      type: ref
+      field: field_topics
+    audiences:
+      type: ref
+      field: field_audience
+    intent:
+      type: ref
+      field: field_intent
+    goal:
+      type: ref
+      field: field_goal
+
+
+
+
