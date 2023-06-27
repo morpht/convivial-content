@@ -24,7 +24,7 @@ vocabulary:
       type: vocabulary-name
     key:
       type: text
-      field: field_key
+      field: field_promotion_type_value
 
 
 content-block:
