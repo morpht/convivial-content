@@ -7,18 +7,18 @@ site:
   name: Bookshop Demo
   homepage: page-home
   email: contact+convivial-demo-bookshop@morpht.com
-  
+
 theme:
   logo: "https://source.unsplash.com/random/1920x1080/?logo"
 
 vocabulary:
 
-  intent:                            
+  intent:
     intent-signup:
       name: Signup
       key: intent-signup
-      
-  stage:                            
+
+  stage:
     stage-orientation:
       name: Orientation
       key: stage-orientation
@@ -28,7 +28,7 @@ vocabulary:
     stage-validation:
       name: Validation
       key: stage-validation
-    stage-conversion:          
+    stage-conversion:
       name: Conversion
       key: stage-conversion
     stage-converted:
@@ -36,25 +36,22 @@ vocabulary:
       key: stage-converted
     stage-continue:
       name: Continue
-       key: stage-continue
-       
-  goal:                            
+      key: stage-continue
+  goal:
     goal-booked:
       name: Booked
       key: goal-booked
     goal-subscribed:
       name: Subscribed
-      key: goal-subscribed 
-      
-  campaign:                            
+      key: goal-subscribed
+  campaign:
     campaign-acquistion:
       name: Acquisition
       key: acquisition
     campaign-education:
       name: Education
-      key: education 
-                   
-  promotion_type:                            
+      key: education
+  promotion_type:
     promotion-type-next-cta:
       name: Next CTA
       key: promotion-type-next-cta
@@ -743,5 +740,4 @@ menu:
     - page-contact
   footer:
     - tac
-    - privacy     
-    
+    - privacy
