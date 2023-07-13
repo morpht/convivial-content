@@ -19,13 +19,23 @@ vocabulary:
     key:
       type: text
       field: field_key
-  promotion-type:
+  campaign:
+    name:
+      type: vocabulary-name
+    key:
+      type: text
+      field: field_key
+  promotion_type:
     name:
       type: vocabulary-name
     key:
       type: text
       field: field_promotion_type_value
 
+media:
+  image:
+    name: text
+    field: field_media_image
 
 content-block:
   promotion:
