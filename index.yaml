@@ -1,2 +1,3 @@
 bookshop:
   name: Bookshop
+  file: site-bookshop.yaml
