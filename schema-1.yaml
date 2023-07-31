@@ -1,6 +1,7 @@
 schema-version: 1
 
 vocabulary:
+
   intent:
     name:
       type: vocabulary-name
@@ -33,90 +34,115 @@ vocabulary:
       field: field_promotion_type_value
 
 media:
+
   image:
-    name: text
-    field: field_media_image
+    name:
+      type: media-text
+    media_image:
+      type: media-image
+      field: field_media_image
 
 content-block:
+
   promotion:
     name: content-block-name
     heading:
       type: text
       field: field_heading
 
-  personified-data:
-    name: content-block-name
-    heading:  
+  personified_data:
+    info: content-block-info
+    endpoint:
       type: text
-      field: field_heading
+      field: field_personified_endpoint
+    template:
+      type: list
+      field: field_personified_template
+    parameter:
+      type: paragraphs
+      field: field_personified_parameters
 
-
-paragraph:
+paragraphs:
 
   parameter:
-    
-       
+    name:   parameter-name
+    default-value:
+      type: text
+      field: field_parameter_default_value
+    endpoint-key:
+      type: text
+      field: field_parameter_endpoint_key
+    source-key:
+      type: text
+      field: field_parameter_source_key
+    source-type:
+      type: list
+      field: field_parameter_source_type
+
 content-type:
 
   audience:
-    title: 
+    title:
       type: content-type-title
-    introduction: 
+    summary:
       type: text
-      field: field_summary 
-    thumbnail: 
+      field: field_summary
+    thumbnail:
       type: media-image
-      field: field_thumbnail           
-    introduction: 
+      field: field_thumbnail
+    introduction:
       type: html
       field: field_introduction
-    body: 
+    body:
       type: html
-      field: body
-    components: 
+      field: field_body
+    components:
       type: paragraphs
       field: field_components
-    tasks: 
+    tasks:
       type: ref
-      field: field_tasks     
+      field: field_tasks
+    key:
+      type: text
+      field: field_key
 
   topic:
-    title: 
+    title:
       type: content-type-title
-    introduction: 
+    summary:
       type: text
-      field: field_summary 
-    thumbnail: 
+      field: field_summary
+    thumbnail:
       type: media-image
-      field: field_thumbnail           
-    introduction: 
+      field: field_thumbnail
+    introduction:
       type: html
       field: field_introduction
-    body: 
+    body:
       type: html
-      field: body
-    components: 
+      field: field_body
+    components:
       type: paragraphs
       field: field_components
 
   page:
-    alias: 
+    alias:
       type: alias
-    title: 
+    title:
       type: content-type-title
-    introduction: 
+    summary:
       type: text
-      field: field_summary 
-    thumbnail: 
+      field: field_summary
+    thumbnail:
       type: media-image
-      field: field_thumbnail           
-    introduction: 
+      field: field_thumbnail
+    introduction:
       type: html
       field: field_introduction
-    body: 
+    body:
       type: html
-      field: body
-    components: 
+      field: field_body
+    components:
       type: paragraphs
       field: field_components
     topics:
@@ -136,21 +162,21 @@ content-type:
       field: field_stage
 
   article:
-    title: 
+    title:
       type: content-type-title
-    introduction: 
+    summary:
       type: text
-      field: field_summary 
-    thumbnail: 
+      field: field_summary
+    thumbnail:
       type: media-image
-      field: field_thumbnail           
-    introduction: 
+      field: field_thumbnail
+    introduction:
       type: html
       field: field_introduction
-    body: 
+    body:
       type: html
-      field: body
-    components: 
+      field: field_body
+    components:
       type: paragraphs
       field: field_components
     topics:
@@ -161,7 +187,7 @@ content-type:
       field: field_audience
     authors:
       type: ref
-      field: field_authors     
+      field: field_authored_by
     intent:
       type: ref
       field: field_intent
@@ -170,21 +196,21 @@ content-type:
       field: field_goal
 
   event:
-    title: 
+    title:
       type: content-type-title
-    introduction: 
+    summary:
       type: text
-      field: field_summary 
-    thumbnail: 
+      field: field_summary
+    thumbnail:
       type: media-image
-      field: field_thumbnail           
-    introduction: 
+      field: field_thumbnail
+    introduction:
       type: html
       field: field_introduction
-    body: 
+    body:
       type: html
-      field: body
-    components: 
+      field: field_body
+    components:
       type: paragraphs
       field: field_components
     topics:
@@ -201,37 +227,37 @@ content-type:
       field: field_goal
 
   person:
-    title: 
+    title:
       type: content-type-title
-    introduction: 
+    summary:
       type: text
-      field: field_summary 
-    thumbnail: 
+      field: field_summary
+    thumbnail:
       type: media-image
-      field: field_thumbnail           
-    introduction: 
+      field: field_thumbnail
+    introduction:
       type: html
       field: field_introduction
-    body: 
+    body:
       type: html
-      field: body
+      field: field_body
 
   place:
-    title: 
+    title:
       type: content-type-title
-    introduction: 
+    summary:
       type: text
-      field: field_summary 
-    thumbnail: 
+      field: field_summary
+    thumbnail:
       type: media-image
-      field: field_thumbnail           
-    introduction: 
+      field: field_thumbnail
+    introduction:
       type: html
       field: field_introduction
-    body: 
+    body:
       type: html
-      field: body
-    components: 
+      field: field_body
+    components:
       type: paragraphs
       field: field_components
     topics:
@@ -246,7 +272,3 @@ content-type:
     goal:
       type: ref
       field: field_goal
-
-
-
-
