@@ -59,6 +59,7 @@ vocabulary:
       key: promotion-type-season-banner
 
 media:
+
   image:
     image-site:
       name: Bookshop
@@ -111,145 +112,64 @@ media:
 
 content-block:
 
-  personified-data:
-    audience-cards:
-      name: Audience tasks
+# personified_data should be same as the machine name.
+  personified_data:
+    personified-data-audience-tasks:
+      info: 'Audience tasks'
       endpoint: /data/tasks
-      template: promotion
-      parameters:
-        -
-          endpoint-key: key
-          source-key: audience
-          source_type: localstorage
-          default: audience-general
-     
-    topic-news:
-      name: Topic news
+      template: promotion-plain
+      parameter:
+        parameter:
+          - endpoint-key: key
+            source-key: season
+            source-type: local_storage
+            default-value: default_value
+
+    personified-data-topic-news:
+      info: Topic news
       endpoint: /data/articles
-      template: image-cards-thirds
-      parameters:
-        -
-          endpoint-key: key
-          source-key: topic
-          source_type: localstorage
-          default:
-    
-    season-banner:
-      name: Season banner
+      template: item-image-card
+      parameter:
+        parameter:
+          - endpoint-key: key
+            source-key: topic
+            source-type: local_storage
+            default-value:
+
+    personified-data-season-banner:
+      info: Season banner
       endpoint: /data/promotion
-      template: promotion
-      parameters:
-        -
-          endpoint-key: type
-          source-key:
-          source_type: constant
-          default: promotion-type-season-banner    
-        -
-          endpoint-key: key
-          source-key: season
-          source_type: localstorage
-          default:
-     
-    next-cta:
-      name: Next CTA
+      template: item-teaser
+      parameter:
+        parameter:
+          - endpoint-key: type
+            source-key:
+            source-type: constant
+            default-value: promotion-type-season-banner
+          - endpoint-key: key
+            source-key: season
+            source-type: local_storage
+            default-value:
+
+
+    personified-data-next-cta:
+      info: Next CTA
       endpoint: /data/promotion
-      template: promotion
-      parameters:
-        -
-          endpoint-key: type
-          source-key:
-          source_type: constant
-          default: promotion-type-next-cta    
-        -
-          endpoint-key: key
-          source-key: next
-          source_type: localstorage
-          default:  
-  
-  promotion:
-    campaign-acquisition:
-      type: promotion-type-next-cta
-      name: Acquisition CTA
-      heading: Stay up to date
-      body: "<p>Our newsletter will help you stay up to date.</p><p><a href='/subscribe'>class='btn'>Subscribe</a></p>"
-      keys: 
-        - acquisition
-    campaign-education:
-      type: promotion-type-next-cta
-      name: Education CTA
-      heading: Get educated
-      body: "<p>The bookshop has a lot to offer.</p><p><a href='/about'>class='btn'>Find out more</a></p>"
-      keys: 
-        - education     
-    stage-orientation:
-      type: promotion-type-next-cta
-      name: Orientation CTA
-      heading: Take a look around
-      body: "<p>The bookshop has a lot to offer.</p><p><a href='/about'>class='btn'>Find out more</a></p>"
-      keys: 
-        - stage-orientation
-    stage-discovery:
-      type: promotion-type-next-cta
-      name: Orientation CTA
-      heading: Take a look around
-      body: "<p>The bookshop has a lot to offer.</p><p><a href='/catalog'>class='btn'>Catalog</a></p>"
-      keys: 
-        - stage-discovery      
-    stage-validation:
-      type: promotion-type-next-cta
-      name: Orientation CTA
-      heading: Take a look around
-      body: "<p>The bookshop has a lot to offer.</p><p><a href='/testimonials'>class='btn'>Testimonials/a></p>"
-      keys: 
-        - stage-validation        
-    stage-conversion:
-      type: promotion-type-next-cta
-      name: Orientation CTA
-      heading: Take a look around
-      body: "<p>The bookshop has a lot to offer.</p><p><a href='/subscribe'>class='btn'>Subscribe</a></p>"
-      keys: 
-        - stage-conversion        
-    stage-continue:
-      type: promotion-type-next-cta
-      name: Orientation CTA
-      heading: Take a look around
-      body: "<p>The best of books.</p><p><a href='/news'>class='btn'>News</a></p>"
-      keys: 
-        - stage-continue                  
-    season-summer:
-      type: promotion-type-season-banner
-      name: Summer banner
-      heading: Summer reading
-      body: "<p>Just the right book for summer.</p><p><a href='/catalog'>class='btn'>Summer reading</a></p>"
-      image: image-summer
-      keys: 
-        - summer
-    season-autumn:
-      type: promotion-type-season-banner
-      name: Summer banner
-      heading: Autumn reading
-      body: "<p>Just the right book for autumn.</p><p><a href='/catalog'>class='btn'>Autumn reading</a></p>"
-      image: image-autumn
-      keys: 
-        - autumn       
-    season-winter:
-      type: promotion-type-season-banner
-      name: Winter banner
-      heading: Winter reading
-      body: "<p>Just the right book for winter.</p><p><a href='/catalog'>class='btn'>Winter reading</a></p>"
-      image: image-winter
-      keys: 
-        - winter    
-    season-spring:
-      type: promotion-type-season-banner
-      name: spring banner
-      heading: Spring reading
-      body: "<p>Just the right book for spring.</p><p><a href='/catalog'>class='btn'>Spring reading</a></p>"
-      image: image-spring
-      keys: 
-        - spring
-               
-                          
+      template: item-teaser
+      # This is the schema key name, which can also be the field name.
+      parameter:
+        # This is the paragraph type name.
+        parameter:
+          - endpoint-key: type
+            source-key:
+            source-type: constant
+            default-value: promotion-type-next-cta
+          - endpoint-key: key
+            source-key: next
+            source-type: local_storage
+            default-value:
+
+
 content-type:
 
   audience:
@@ -257,34 +177,34 @@ content-type:
       title: Youth
       key: audience-youth
       thumbnail: image-youth
-      introduction: "<p class=intro">Youth related content.</p>"
+      introduction: "<p class=intro>Youth related content.</p>"
       tasks:
         - audience-youth
     audience-adult:
       title: Adult
       key: audience-adult
       thumbnail: image-adult
-      introduction: "<p class=intro">Adult related content.</p>"
+      introduction: "<p class=intro>Adult related content.</p>"
       tasks:
         - audience-adult
-      
-  topic:                            
+
+  topic:
     topic-sci-fi:
       title: Sci-fi
       key: topic-sci-fi
       thumbnail: image-sci-fi
-      introduction: "<p class=intro">Sci-fi related content.</p>"
+      introduction: "<p class=intro>Sci-fi related content.</p>"
     topic-comedic-fiction:
-      title: Comedic fiction  
+      title: Comedic fiction
       key: topic-comedic-fiction
       thumbnail: image-comedic-fiction
-      introduction: "<p class=intro">Comedic fiction related content.</p>"
+      introduction: "<p class=intro>Comedic fiction related content.</p>"
     topic-fantasy:
-      title: Fantasy  
+      title: Fantasy
       key: topic-fantasy
       thumbnail: image-fantasy
-      introduction: "<p class=intro">Fantasy related content.</p>"
-            
+      introduction: "<p class=intro>Fantasy related content.</p>"
+
   page:
     page-home:
       alias: /
@@ -292,451 +212,376 @@ content-type:
       summary: Bookshop demo.
       body: Page 1 body
       thumbnail: image-site
-      introduction: "<p class=intro">A personalised bookshop.</p>"
+      introduction: "<p class=intro>A personalised bookshop.</p>"
       components:
-        -
-          type: content-block
-          block: personified-data-audience-tasks
-        -
-          type: content-block
-          block: personified-data-topic-news    
-        -
-          type: content-block
-          block: personified-data-season-banner 
-                   
+        # content_block is the paragraph type name.
+        content_block:
+          - heading: Audience tasks
+            cb-block: personified-data-audience-tasks
+          - heading: Topic news
+            cb-block: personified-data-topic-news
+            hide-heading: FALSE
+          - heading: Season Banner
+            cb-block: personified-data-season-banner
     page-tac:
       alias: /tac
       title: Terms and Conditions
       summary: Bookshop terms and conditions.
-      introduction: "<p class=intro">Terms and Conditions for the bookshop.</p>"
+      introduction: "<p class=intro>Terms and Conditions for the bookshop.</p>"
       body: "<p>Terms and conditions.</p>"
     page-privacy:
       alias: /privacy
       title: Privacy
       summary: Bookshop pricacy statement.
-      introduction: "<p class=intro">Terms and Conditions for the bookshop.</p>"
+      introduction: "<p class=intro>Terms and Conditions for the bookshop.</p>"
       body: "<p>Your browsing behaviour will be used to build a local profile which will be used to personalisae the site.</p>"
     page-about:
       alias: /about
       title: About
       summary: About the bookshop
-      introduction: "<p class=intro">A demo of Convivial CXP by Morpht.</p>"
+      introduction: "<p class=intro>A demo of Convivial CXP by Morpht.</p>"
       body: "<p>The bookshop demonstrates the personalisation features of Convivial. Find out more at <a href='https://www.morpht.com/'>Morpht></a>.</p>"
     page-contact:
       alias: /contact
       title: Contact
       summary: Contact
-      introduction: "<p class=intro">A personalised bookshop.</p>"
-      body: "<p><a href='https://www.morpht.com/contact'>Contact Morpht></a></p>"           
-    page-search:
-      alias: /search
-      title: Search
-      summary: Search the bookshop.
-      thumbnail: image-search
-      introduction: "<p class=intro">Search the bookshop.</p>"
-      components:
-        -
-          type: view
-          block: search block_1
-    page-articles:
-      alias: /news
-      title: News
-      summary: Bookshop news.
-      thumbnail: image-articles
-      introduction: "<p class=intro">The latest books.</p>"
-      components:
-        -
-          type: view
-          definition: articles block_1
-    page-events:
-      alias: /events
-      title: Events
-      summary: Bookshop events.
-      thumbnail: image-events
-      introduction: "<p class=intro">The latest events.</p>"
-      components:
-        -
-          type: view
-          definition: events block_1
-    page-authors:
-      alias: /authors
-      title: Authors
-      summary: Bookshop authors.
-      thumbnail: image-people
-      introduction: "<p class=intro">All the authors.</p>"
-      components:
-        -
-          type: view
-          definition: persons block_1
-    page-catalog:
-      alias: /catalog
-      title: Catalog
-      summary: Bookshop catalog of topics and audiences.
-      thumbnail: image-catalog
-      introduction: "<p class=intro">Topics and Audiences.</p>"
-      components:
-        -
-          type: view
-          definition: topics block_1
-        -
-          type: view
-          definition: audiences block_1
- 
+      introduction: "<p class=intro>A personalised bookshop.</p>"
+      body: "<p><a href='https://www.morpht.com/contact'>Contact Morpht></a></p>"
+
   person:
     person-isaac-asimov:
       key: person-isaac-asimov
       title: Isaac Asimov
-      summary: Isaac Asimov (/ˈæzɪmɒv/; c.  January 2, 1920 – April 6, 1992) was an American writer and professor of biochemistry at Boston University. He was known for his works of science fiction and popular science. 
-      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the "Big Three" science fiction writers during his lifetime. Asimov's most famous work is the "Foundation" series,the first three books of which won the one-time Hugo Award for "Best All-Time Series" in 1966. His other major series are the "Galactic Empire" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified "future history" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette "Nightfall", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
+      summary: Isaac Asimov (/ˈæzɪmɒv/; c. January 2, 1920 – April 6, 1992) was an American writer and professor of biochemistry at Boston University. He was known for his works of science fiction and popular science.
+      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the \"Big Three\" science fiction writers during his lifetime. Asimov's most famous work is the \"Foundation\" series,the first three books of which won the one-time Hugo Award for \"Best All-Time Series\" in 1966. His other major series are the \"Galactic Empire\" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified \"future history\" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette \"Nightfall\", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
     person-terry-pratchett:
       key: person-terry-pratchett
       title: Terry Pratchett
-      summary: Sir Terence David John Pratchett OBE (28 April 1948 – 12 March 2015) was an English humorist, satirist, and author of fantasy novels, especially comical works. He is best known for his Discworld series of 41 novels.
-      body: "<p>Pratchett, with more than 85 million books sold worldwide in 37 languages, was the UK's best-selling author of the 1990s. He was appointed Officer of the Order of the British Empire (OBE) in 1998 and was knighted for services to literature in the 2009 New Year Honours. In 2001 he won the annual Carnegie Medal for The Amazing Maurice and his Educated Rodents, the first Discworld book marketed for children. He received the World Fantasy Award for Life Achievement in 2010.</p>"
+      summary: Sir Terence David John Pratchett OBE (28 April 1948 – 12 March 2015) was an English humorist, satirist, and author of fantasy novels, especially comical works. He is best known for his Discworld series of 41 novels.
+      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the \"Big Three\" science fiction writers during his lifetime. Asimov's most famous work is the \"Foundation\" series,the first three books of which won the one-time Hugo Award for \"Best All-Time Series\" in 1966. His other major series are the \"Galactic Empire\" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified \"future history\" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette \"Nightfall\", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
     person-j-r-r-tolkien:
       key: person-j-r-r-tolkien
       title: J R R Tolkien
-      summary: John Ronald Reuel Tolkien CBE FRSL (/ruːl ˈtɒlkiːn/; 3 January 1892 – 2 September 1973) was an English writer, poet, philologist, and academic, best known as the author of the high fantasy works The Hobbit and The Lord of the Rings.      
-      body: "<p>He served as the Rawlinson and Bosworth Professor of Anglo-Saxon and Fellow of Pembroke College, Oxford from 1925 to 1945, Merton Professor of English Language and Literature, and Fellow of Merton College, Oxford from 1945 to 1959. He was a close friend of C. S. Lewis—they were both members of the informal literary discussion group known as The Inklings. Tolkien was appointed a Commander of the Order of the British Empire by Queen Elizabeth II on 28 March 1972.</p>" 
+      summary: John Ronald Reuel Tolkien CBE FRSL (/ruːl ˈtɒlkiːn/; 3 January 1892 – 2 September 1973) was an English writer, poet, philologist, and academic, best known as the author of the high fantasy works The Hobbit and The Lord of the Rings.
+      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the \"Big Three\" science fiction writers during his lifetime. Asimov's most famous work is the \"Foundation\" series,the first three books of which won the one-time Hugo Award for \"Best All-Time Series\" in 1966. His other major series are the \"Galactic Empire\" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified \"future history\" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette \"Nightfall\", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
     person-arthur-c-clarke:
       key: person-arthur-c-clarke
       title: Arthur C Clarke
-      summary: Sir Arthur Charles Clarke CBE FRAS (16 December 1917 – 19 March 2008) was an English science-fiction writer, science writer, futurist, inventor, undersea explorer, and television series host.     
-      body: "<p>He co-wrote the screenplay for the 1968 film 2001: A Space Odyssey, one of the most influential films of all time. Clarke was a science fiction writer, an avid populariser of space travel, and a futurist of a distinguished ability. He wrote many books and many essays for popular magazines. In 1961, he received the Kalinga Prize, a UNESCO award for popularising science. Clarke's science and science-fiction writings earned him the moniker "Prophet of the Space Age". His science-fiction writings in particular earned him a number of Hugo and Nebula awards, which along with a large readership, made him one of the towering figures of the genre. For many years Clarke, Robert Heinlein, and Isaac Asimov were known as the "Big Three" of science fiction</p>"  
-     person-orson-scott-card:
+      summary: Sir Arthur Charles Clarke CBE FRAS (16 December 1917 – 19 March 2008) was an English science-fiction writer, science writer, futurist, inventor, undersea explorer, and television series host.
+      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the \"Big Three\" science fiction writers during his lifetime. Asimov's most famous work is the \"Foundation\" series,the first three books of which won the one-time Hugo Award for \"Best All-Time Series\" in 1966. His other major series are the \"Galactic Empire\" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified \"future history\" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette \"Nightfall\", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
+    person-orson-scott-card:
       key: person-orson-scott-card
       title: Orson Scott Card
-      summary: Orson Scott Card (born August 24, 1951) is an American writer known best for his science fiction works.     
-      body: "<p>Card's works were influenced by classic literature, popular fantasy, and science fiction; he often uses tropes from genre fiction. His background as a screenwriter helped Card make his works accessible, though some critics dislike his characterization. Card's early fiction is original but contains graphic violence. His fiction often features characters with exceptional gifts who make difficult choices with high stakes. Card has also written political, religious, and social commentary in his columns and other writing. Card's opposition to homosexuality has provoked public criticism and in 2013 it prompted a boycott of the film Ender's Game.</p>" 
+      summary: Orson Scott Card (born August 24, 1951) is an American writer known best for his science fiction works.
+      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the \"Big Three\" science fiction writers during his lifetime. Asimov's most famous work is the \"Foundation\" series,the first three books of which won the one-time Hugo Award for \"Best All-Time Series\" in 1966. His other major series are the \"Galactic Empire\" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified \"future history\" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette \"Nightfall\", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
     person-h-g-wells:
       key: person-h-g-wells
       title: H G Wells
-      summary: Herbert George Wells (21 September 1866 – 13 August 1946) was an English writer. Prolific in many genres, he wrote dozens of novels, short stories, and works of social commentary, history, satire, biography and autobiography.      
-      body: "<p>Prolific in many genres, he wrote dozens of novels, short stories, and works of social commentary, history, satire, biography and autobiography. His work also included two books on recreational war games. Wells is now best remembered for his science fiction novels and is often called the "father of science fiction", along with Jules Verne and the publisher Hugo Gernsback.</p>"  
+      summary: Herbert George Wells (21 September 1866 – 13 August 1946) was an English writer. Prolific in many genres, he wrote dozens of novels, short stories, and works of social commentary, history, satire, biography and autobiography.
+      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the \"Big Three\" science fiction writers during his lifetime. Asimov's most famous work is the \"Foundation\" series,the first three books of which won the one-time Hugo Award for \"Best All-Time Series\" in 1966. His other major series are the \"Galactic Empire\" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified \"future history\" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette \"Nightfall\", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
     person-cornelia-funke:
       key: person-cornelia-funke
       title: Cornelia Funke
-      summary: Cornelia Maria Funke (German) (born 10 December 1958) is a German author of children's fiction.       
-      body: "<p>Born in Dorsten, North Rhine-Westphalia, she began her career as a social worker before becoming a book illustrator. She began writing novels in the late 1980s and focused primarily on fantasy-oriented stories that depict the lives of children faced with adversity. Funke has since become Germany's "best-selling author for children." Her work has been translated into several languages and, as of 2012, Funke has sold over 20 million copies of her books worldwide.</p>"  
+      summary: Cornelia Maria Funke (German) (born 10 December 1958) is a German author of children's fiction.
+      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the \"Big Three\" science fiction writers during his lifetime. Asimov's most famous work is the \"Foundation\" series,the first three books of which won the one-time Hugo Award for \"Best All-Time Series\" in 1966. His other major series are the \"Galactic Empire\" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified \"future history\" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette \"Nightfall\", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
     person-j-k-rowling:
       key: person-j-k-rowling
       title: J K Rowling
-      summary: Joanne Rowling CH, OBE, HonFRSE, FRCPE, FRSL (/ˈroʊlɪŋ/ ROH-ling; born 31 July 1965), better known by her pen name J. K. Rowling, is a British author and philanthropist.      
-      body: "<p>She is best known for writing the Harry Potter fantasy series, which has won multiple awards and sold more than 500 million copies, becoming the best-selling book series in history. The books are the basis of a popular film series, over which Rowling had overall approval on the scripts and was a producer on the final films. She also writes crime fiction under the pen name Robert Galbraith.</p>"  
+      summary: Joanne Rowling CH, OBE, HonFRSE, FRCPE, FRSL (/ˈroʊlɪŋ/ ROH-ling; born 31 July 1965), better known by her pen name J. K. Rowling, is a British author and philanthropist.
+      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the \"Big Three\" science fiction writers during his lifetime. Asimov's most famous work is the \"Foundation\" series,the first three books of which won the one-time Hugo Award for \"Best All-Time Series\" in 1966. His other major series are the \"Galactic Empire\" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified \"future history\" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette \"Nightfall\", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
     person-susanna-clarke:
       key: person-susanna-clarke
       title: Susanna Clarke
-      summary: Susanna Mary Clarke (born 1 November 1959) is an English author best known for her debut novel Jonathan Strange & Mr Norrell (2004), a Hugo Award-winning alternative history.      
-      body: "<p>Clarke began Jonathan Strange in 1993 and worked on it during her spare time. For the next decade, she published short stories from the Strange universe, but it was not until 2003 that Bloomsbury bought her manuscript and began work on its publication. The novel became a best-seller.</p>"  
+      summary: Susanna Mary Clarke (born 1 November 1959) is an English author best known for her debut novel Jonathan Strange & Mr Norrell (2004), a Hugo Award-winning alternative history.
+      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the \"Big Three\" science fiction writers during his lifetime. Asimov's most famous work is the \"Foundation\" series,the first three books of which won the one-time Hugo Award for \"Best All-Time Series\" in 1966. His other major series are the \"Galactic Empire\" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified \"future history\" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette \"Nightfall\", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
     person-c-s-lewis:
       key: person-c-s-lewis
       title: C S Lewis
-      summary: Clive Staples Lewis (29 November 1898 – 22 November 1963) was a British writer and lay theologian. He held academic positions in English literature at both Oxford University (Magdalen College, 1925–1954) and Cambridge University (Magdalene College, 1954–1963).     
-      body: "<p>He held academic positions in English literature at both Oxford University (Magdalen College, 1925–1954) and Cambridge University (Magdalene College, 1954–1963). He is best known for his works of fiction, especially The Screwtape Letters, The Chronicles of Narnia, and The Space Trilogy, and for his non-fiction Christian apologetics, such as Mere Christianity, Miracles, and The Problem of Pain.</p>"  
+      summary: Clive Staples Lewis (29 November 1898 – 22 November 1963) was a British writer and lay theologian. He held academic positions in English literature at both Oxford University (Magdalen College, 1925–1954) and Cambridge University (Magdalene College, 1954–1963).
+      body: "<p>He also created the child-oriented website Poptropica.</p>"
     person-madeleine-lengle:
       key: person-madeleine-lengle
       title: Madeleine L'Engle
-      summary: Madeleine L'Engle Camp (November 29, 1918 – September 6, 2007) was an American writer of fiction, non-fiction, poetry, and young adult fiction, including A Wrinkle in Time and its sequels.      
-      body: "<p>Her works reflect both her Christian faith and her strong interest in modern science.</p>"  
+      summary: Madeleine L'Engle Camp (November 29, 1918 – September 6, 2007) was an American writer of fiction, non-fiction, poetry, and young adult fiction, including A Wrinkle in Time and its sequels.
+      body: "<p>Her works reflect both her Christian faith and her strong interest in modern science.</p>"
     person-jennifer-l-holm:
       key: person-jennifer-l-holm
       title: Jennifer L. Holm
-      summary: Jennifer L. Holm is an American children's writer, and recipient of three Newbery Honors and the Eisner Award.    
-      body: "<p>Holm was born in 1968 in San Diego, California. She spent her early life living on Whidbey Island on the Puget Sound in Washington state,[7] before her family relocated to Audubon, Pennsylvania with her four brothers. After graduating from Dickinson College in Carlisle, Pennsylvania, she worked in television and later began to write.</p>"  
+      summary: Jennifer L. Holm is an American children's writer, and recipient of three Newbery Honors and the Eisner Award.
+      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the \"Big Three\" science fiction writers during his lifetime. Asimov's most famous work is the \"Foundation\" series,the first three books of which won the one-time Hugo Award for \"Best All-Time Series\" in 1966. His other major series are the \"Galactic Empire\" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified \"future history\" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette \"Nightfall\", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
     person-jeff-kinney:
       key: person-jeff-kinney
       title: Jeff Kinney
-      summary: Jeffrey Patrick Kinney (born February 19, 1971) is an American author and cartoonist, best known for the children's book series Diary of a Wimpy Kid. He also created the child-oriented website Poptropica.      
-      body: "<p>He also created the child-oriented website Poptropica.</p>"  
+      summary: Jeffrey Patrick Kinney (born February 19, 1971) is an American author and cartoonist, best known for the children's book series Diary of a Wimpy Kid. He also created the child-oriented website Poptropica.
+      body: "<p>He also created the child-oriented website Poptropica.</p>"
     person-andy-griffith:
       key: person-andy-griffith
       title: Andy Griffith
-      summary: Andy Samuel Griffith (June 1, 1926 – July 3, 2012) was an American actor, comedian, television producer, southern gospel singer, and writer whose career spanned seven decades in music and television.     
-      body: "<p>Known for his Southern drawl, his characters with a folksy-friendly personality, and his gruff but friendly voice, Griffith was a Tony Award nominee for two roles, and gained prominence in the starring role in director Elia Kazan's film A Face in the Crowd (1957) before he became better known for his television roles, playing the lead roles of Andy Taylor in the sitcom The Andy Griffith Show (1960–1968) and Ben Matlock in the legal drama Matlock (1986–1995).</p>"  
+      summary: Andy Samuel Griffith (June 1, 1926 – July 3, 2012) was an American actor, comedian, television producer, southern gospel singer, and writer whose career spanned seven decades in music and television.
+      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the \"Big Three\" science fiction writers during his lifetime. Asimov's most famous work is the \"Foundation\" series,the first three books of which won the one-time Hugo Award for \"Best All-Time Series\" in 1966. His other major series are the \"Galactic Empire\" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified \"future history\" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette \"Nightfall\", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
     person-roald-dahl:
       key: person-roald-dahl
       title: Roald Dahl
-      summary: Roald Dahl (13 September 1916 – 23 November 1990) was a British novelist, short-story writer, poet, screenwriter, and wartime fighter pilot. His books have sold more than 250 million copies worldwide      
-      body: "<p>Dahl was born in Wales to Norwegian immigrant parents. He served in the Royal Air Force during the Second World War. He became a fighter pilot and, subsequently, an intelligence officer, rising to the rank of acting wing commander. He rose to prominence as a writer in the 1940s with works for children and for adults, and he became one of the world's best-selling authors. He has been referred to as "one of the greatest storytellers for children of the 20th century".His awards for contribution to literature include the 1983 World Fantasy Award for Life Achievement and the British Book Awards' Children's Author of the Year in 1990. In 2008, The Times placed Dahl 16th on its list of "The 50 Greatest British Writers Since 1945"</p>"  
+      summary: Roald Dahl (13 September 1916 – 23 November 1990) was a British novelist, short-story writer, poet, screenwriter, and wartime fighter pilot. His books have sold more than 250 million copies worldwide
+      body: "<p>He also created the child-oriented website Poptropica.</p>"
     person-helen-fielding:
       key: person-helen-fielding
       title: Helen Fielding
-      summary: Helen Fielding (born 19 February 1958) is an English novelist and screenwriter, best known as the creator of the fictional character Bridget Jones, and a sequence of novels and films beginning with the life of a thirty something singleton in London trying to make sense of life and love.       
-      body: "<p>Bridget Jones's Diary (1996) and Bridget Jones: The Edge of Reason (1999) were published in 40 countries and sold more than 15 million copies.The two films of the same name achieved international success. In a survey conducted by The Guardian newspaper, Bridget Jones’s Diary was named as one of the ten novels that best defined the 20th century.</p>" 
+      summary: Helen Fielding (born 19 February 1958) is an English novelist and screenwriter, best known as the creator of the fictional character Bridget Jones, and a sequence of novels and films beginning with the life of a thirty something singleton in London trying to make sense of life and love.
+      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the \"Big Three\" science fiction writers during his lifetime. Asimov's most famous work is the \"Foundation\" series,the first three books of which won the one-time Hugo Award for \"Best All-Time Series\" in 1966. His other major series are the \"Galactic Empire\" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified \"future history\" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette \"Nightfall\", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
     person-p-g-wodehouse:
       key: person-p-g-wodehouse
       title: P G Wodehouse
-      summary: Sir Pelham Grenville Wodehouse, KBE (/ˈwʊdhaʊs/ WOOD-howss; 15 October 1881 – 14 February 1975) was an English author and one of the most widely read humorists of the 20th century.       
-      body: "<p>Born in Guildford, the third son of a British magistrate based in Hong Kong, Wodehouse spent happy teenage years at Dulwich College, to which he remained devoted all his life. After leaving school he was employed by a bank but disliked the work and turned to writing in his spare time. His early novels were mostly school stories, but he later switched to comic fiction, creating several regular characters who became familiar to the public over the years. They include the feather-brained Bertie Wooster and his sagacious valet, Jeeves; the immaculate and loquacious Psmith; Lord Emsworth and the Blandings Castle set; the Oldest Member, with stories about golf; and Mr Mulliner, with tall tales on subjects ranging from bibulous bishops to megalomaniac movie moguls.</p>"  
+      summary: Sir Pelham Grenville Wodehouse, KBE (/ˈwʊdhaʊs/ WOOD-howss; 15 October 1881 – 14 February 1975) was an English author and one of the most widely read humorists of the 20th century.
+      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the \"Big Three\" science fiction writers during his lifetime. Asimov's most famous work is the \"Foundation\" series,the first three books of which won the one-time Hugo Award for \"Best All-Time Series\" in 1966. His other major series are the \"Galactic Empire\" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified \"future history\" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette \"Nightfall\", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
     person-john-kennedy-toole:
       key: person-john-kennedy-toole
       title: John Kennedy Toole
-      summary: John Kennedy Toole (/ˈtuːl/; December 17, 1937 – March 26, 1969) was an American novelist from New Orleans, Louisiana, whose posthumously published novel A Confederacy of Dunces won the Pulitzer Prize for Fiction.      
-      body: "<p>Toole was born to a middle-class family in New Orleans. From a young age, his mother, Thelma, taught him an appreciation of culture. She was thoroughly involved in his affairs for most of his life, and at times they had a difficult relationship. With his mother's encouragement, Toole became a stage performer at the age of 10 doing comic impressions and acting. At 16 he wrote his first novel, The Neon Bible, which he later dismissed as "adolescent".</p>"  
+      summary: John Kennedy Toole (/ˈtuːl/; December 17, 1937 – March 26, 1969) was an American novelist from New Orleans, Louisiana, whose posthumously published novel A Confederacy of Dunces won the Pulitzer Prize for Fiction.
+      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the \"Big Three\" science fiction writers during his lifetime. Asimov's most famous work is the \"Foundation\" series,the first three books of which won the one-time Hugo Award for \"Best All-Time Series\" in 1966. His other major series are the \"Galactic Empire\" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified \"future history\" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette \"Nightfall\", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
     person-stella-gibbons:
       key: person-stella-gibbons
       title: Stella Gibbons
-      summary: Stella Dorothea Gibbons (5 January 1902 – 19 December 1989) was an English author, journalist, and poet. She established her reputation with her first novel, Cold Comfort Farm (1932) which has been reprinted many times.    
-      body: "<p>She established her reputation with her first novel, Cold Comfort Farm (1932) which has been reprinted many times. Although she was active as a writer for half a century, none of her later 22 novels or other literary works—which included a sequel to Cold Comfort Farm—achieved the same critical or popular success. Much of her work was long out of print before a modest revival in the 21st century.</p>"  
+      summary: Stella Dorothea Gibbons (5 January 1902 – 19 December 1989) was an English author, journalist, and poet. She established her reputation with her first novel, Cold Comfort Farm (1932) which has been reprinted many times.
+      body: "<p>Asimov wrote hard science fiction. Along with Robert A. Heinlein and Arthur C. Clarke, Asimov was considered one of the \"Big Three\" science fiction writers during his lifetime. Asimov's most famous work is the \"Foundation\" series,the first three books of which won the one-time Hugo Award for \"Best All-Time Series\" in 1966. His other major series are the \"Galactic Empire\" series and the Robot series. The Galactic Empire novels are set in earlier history of the same fictional universe as the Foundation series. Later, with Foundation and Earth (1986), he linked this distant future to the Robot stories, creating a unified \"future history\" for his stories much like those pioneered by Robert A. Heinlein and previously produced by Cordwainer Smith and Poul Anderson. He also wrote hundreds of short stories, including the social science fiction novelette \"Nightfall\", which in 1964 was voted the best short science fiction story of all time by the Science Fiction Writers of America. Asimov wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>"
     person-douglas-adams:
       key: person-douglas-adams
       title: Douglas Adams
-      summary: Douglas Noel Adams (11 March 1952 – 11 May 2001) was an English author, screenwriter, essayist, humorist, satirist and dramatist.      
-      body: "<p>Adams was author of The Hitchhiker's Guide to the Galaxy, which originated in 1978 as a BBC radio comedy before developing into a "trilogy" of five books that sold more than 15 million copies in his lifetime and generated a television series, several stage plays, comics, a video game, and in 2005 a feature film. Adams's contribution to UK radio is commemorated in The Radio Academy's Hall of Fame.</p>"  
-                                                 
+      summary: Douglas Noel Adams (11 March 1952 – 11 May 2001) was an English author, screenwriter, essayist, humorist, satirist and dramatist.
+      body: "<p>He also created the child-oriented website Poptropica.</p>"
+
   article:
     article-i-robot:
       title: I, Robot
-      summary: I, Robot is a fixup novel of science fiction short stories or essays by American writer Isaac Asimov.
-      published: 1950-12-02 
-      body: "<p>I, Robot is a fixup novel of science fiction short stories or essays by American writer Isaac Asimov. The stories originally appeared in the American magazines Super Science Stories and Astounding Science Fiction between 1940 and 1950 and were then compiled into a book for stand-alone publication by Gnome Press in 1950, in an initial edition of 5,000 copies. The stories are woven together by a framing narrative in which the fictional Dr. Susan Calvin tells each story to a reporter (who serves as the narrator) in the 21st century. Although the stories can be read separately, they share a theme of the interaction of humans, robots, and morality, and when combined they tell a larger story of Asimov's fictional history of robotics..</p>"
+      summary: I, Robot is a fixup novel of science fiction short stories or essays by American writer Isaac Asimov.
+      published: 1950-12-02
+      body: "<p>I, Robot is a fixup novel of science fiction short stories or essays by American writer Isaac Asimov. The stories originally appeared in the American magazines Super Science Stories and Astounding Science Fiction between 1940 and 1950 and were then compiled into a book for stand-alone publication by Gnome Press in 1950, in an initial edition of 5,000 copies. The stories are woven together by a framing narrative in which the fictional Dr. Susan Calvin tells each story to a reporter (who serves as the narrator) in the 21st century. Although the stories can be read separately, they share a theme of the interaction of humans, robots, and morality, and when combined they tell a larger story of Asimov's fictional history of robotics..</p>"
       topics:
         - topic-sci-fi
       audiences:
         - audience-adult
       authors:
-        - author-isaac-asimov
+        - person-isaac-asimov
+      intent:
+        - intent-signup
     article-war-of-the-worlds:
       title: The War of the Worlds
-      summary: The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US.
-      published: 1900-01-01 
-      body: "<p>The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US. The novel's first appearance in hardcover was in 1898 from publisher William Heinemann of London. Written between 1895 and 1897, it is one of the earliest stories to detail a conflict between mankind and an extra-terrestrial race. The novel is the first-person narrative of both an unnamed protagonist in Surrey and of his younger brother in London as southern England is invaded by Martians. The novel is one of the most commented-on works in the science fiction canon.</p>"
+      summary: The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US.
+      published: 1900-01-01
+      body: "<p>The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US. The novel's first appearance in hardcover was in 1898 from publisher William Heinemann of London. Written between 1895 and 1897, it is one of the earliest stories to detail a conflict between mankind and an extra-terrestrial race. The novel is the first-person narrative of both an unnamed protagonist in Surrey and of his younger brother in London as southern England is invaded by Martians. The novel is one of the most commented-on works in the science fiction canon.</p>"
       topics:
         - topic-sci-fi
       audiences:
         - audience-adult
       authors:
-        - author-h-g-wells
+        - person-h-g-wells
+      suitable_for:
+        - audience-adult
+      intent:
+        - intent-signup
     article-2001-space-odyssey:
       title: "2001: A Space Odyssey"
-      summary: "2001: A Space Odyssey is the 1968 science fiction novel written by Arthur C. Clarke and the 1968 film directed by Stanley Kubrick."
-      published: 1968-01-01 
-      body: "<p>2001: A Space Odyssey is the 1968 science fiction novel written by Arthur C. Clarke and the 1968 film directed by Stanley Kubrick. It is a part of Clarke's Space Odyssey series, the first of four novels and two films. Both the novel and the film are partially based on Clarke's 1948 short story "The Sentinel", an entry in a BBC short story competition, and "Encounter in the Dawn", published in 1953 in the magazine Amazing Stories.</p>"
+      summary: "2001: A Space Odyssey is the 1968 science fiction novel written by Arthur C. Clarke and the 1968 film directed by Stanley Kubrick."
+      published: 1968-01-01
+      body: "<p>The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US. The novel's first appearance in hardcover was in 1898 from publisher William Heinemann of London. Written between 1895 and 1897, it is one of the earliest stories to detail a conflict between mankind and an extra-terrestrial race. The novel is the first-person narrative of both an unnamed protagonist in Surrey and of his younger brother in London as southern England is invaded by Martians. The novel is one of the most commented-on works in the science fiction canon.</p>"
       topics:
         - topic-sci-fi
       audiences:
         - audience-adult
       authors:
-        - author-arthur-c-clarke
+        - person-arthur-c-clarke
     article-the-time-machine:
       title: The Time Machine
-      summary: The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
-      published: 1900-01-01 
-      body: "<p>The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative. The work is generally credited with the popularization of the concept of time travel by using a vehicle or device to travel purposely and selectively forward or backward through time. The term "time machine", coined by Wells, is now almost universally used to refer to such a vehicle or device.</p>"
+      summary: The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
+      published: 1900-01-01
+      body: "<p>The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US. The novel's first appearance in hardcover was in 1898 from publisher William Heinemann of London. Written between 1895 and 1897, it is one of the earliest stories to detail a conflict between mankind and an extra-terrestrial race. The novel is the first-person narrative of both an unnamed protagonist in Surrey and of his younger brother in London as southern England is invaded by Martians. The novel is one of the most commented-on works in the science fiction canon.</p>"
       topics:
         - topic-sci-fi
       audiences:
         - audience-adult
       authors:
-        - author-h-g-wells
+        - person-h-g-wells
     article-dragon-rider:
       title: Dragon Rider
-      summary: "Dragon Rider (original title: Drachenreiter) is a 1997 German children's novel by Cornelia Funke."
-      published: 1997-01-01 
-      body: "<p>Dragon Rider (original title: Drachenreiter) is a 1997 German children's novel by Cornelia Funke. Originally translated by Oliver Latsch, Dragon Rider was published in English in 2004 by The Chicken House in the UK and Scholastic Inc. in the US, using a translation by Anthea Bell. Dragon Rider follows the exploits of a silver dragon named Firedrake, a brownie named Sorrel, and Ben, a human boy, in their search for the mythical part of the Himalayas mountain range called the Rim of Heaven to find a safe place for Firedrake's kin to live when the dragon finds out that humans intend to flood the valley where he and his fellow dragons live.</p>"
+      summary: "Dragon Rider (original title: Drachenreiter) is a 1997 German children's novel by Cornelia Funke."
+      published: 1997-01-01
+      body: "<p>Dragon Rider (original title: Drachenreiter) is a 1997 German children's novel by Cornelia Funke. Originally translated by Oliver Latsch, Dragon Rider was published in English in 2004 by The Chicken House in the UK and Scholastic Inc. in the US, using a translation by Anthea Bell. Dragon Rider follows the exploits of a silver dragon named Firedrake, a brownie named Sorrel, and Ben, a human boy, in their search for the mythical part of the Himalayas mountain range called the Rim of Heaven to find a safe place for Firedrake's kin to live when the dragon finds out that humans intend to flood the valley where he and his fellow dragons live.</p>"
       topics:
         - topic-fantasy
       audiences:
         - audience-youth
       authors:
-        - author-cornelia-funke
+        - person-cornelia-funke
     article-philosophers-stone:
       title: Harry Potter and the Philosopher's Stone
-      summary: Harry Potter and the Philosopher's Stone is a fantasy novel written by British author J. K. Rowling.
+      summary: Harry Potter and the Philosopher's Stone is a fantasy novel written by British author J. K. Rowling.
       published: 1997-06-26
-      body: "<p>Harry Potter and the Philosopher's Stone is a fantasy novel written by British author J. K. Rowling. The first novel in the Harry Potter series and Rowling's debut novel, it follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday, when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry. Harry makes close friends and a few enemies during his first year at the school, and with the help of his friends, he faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.</p>"
+      body: "<p>Harry Potter and the Philosopher's Stone is a fantasy novel written by British author J. K. Rowling. The first novel in the Harry Potter series and Rowling's debut novel, it follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday, when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry. Harry makes close friends and a few enemies during his first year at the school, and with the help of his friends, he faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.</p>"
       topics:
         - topic-fantasy
       audiences:
         - audience-youth
         - audience-adult
       authors:
-        - author-j-k-rowling
+        - person-j-k-rowling
+      intent:
+        - intent-signup
     article-lord-of-the-rings:
       title: Lord of the Rings
-      summary: The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R. R. Tolkien.
-      published: 1954-07-29 
-      body: "<p>The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R. R. Tolkien. Set in Middle-earth, the world at some distant time in the past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work. Written in stages between 1937 and 1949, The Lord of the Rings is one of the best-selling books ever written, with over 150 million copies sold.</p>"
+      summary: The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R. R. Tolkien.
+      published: 1954-07-29
+      body: "<p>The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R. R. Tolkien. Set in Middle-earth, the world at some distant time in the past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work. Written in stages between 1937 and 1949, The Lord of the Rings is one of the best-selling books ever written, with over 150 million copies sold.</p>"
       topics:
         - topic-fantasy
       audiences:
         - audience-youth
         - audience-adult
       authors:
-        - author-j-r-r-tolkien
+        - person-j-r-r-tolkien
     article-colour-of-magic:
       title: The Colour of Magic
-      summary: The Colour of Magic is a 1983 fantasy comedy novel by Terry Pratchett, and is the first book of the Discworld series.
-      published: 1983-11-24 
-      body: "<p>The Colour of Magic is a 1983 fantasy comedy novel by Terry Pratchett, and is the first book of the Discworld series. The first printing of the British edition consisted of only 506 copies. Pratchett has described it as "an attempt to do for the classical fantasy universe what Blazing Saddles did for Westerns."</p>"
+      summary: The Colour of Magic is a 1983 fantasy comedy novel by Terry Pratchett, and is the first book of the Discworld series.
+      published: 1983-11-24
+      body: "<p>The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US. The novel's first appearance in hardcover was in 1898 from publisher William Heinemann of London. Written between 1895 and 1897, it is one of the earliest stories to detail a conflict between mankind and an extra-terrestrial race. The novel is the first-person narrative of both an unnamed protagonist in Surrey and of his younger brother in London as southern England is invaded by Martians. The novel is one of the most commented-on works in the science fiction canon.</p>"
       topics:
         - topic-fantasy
       audiences:
         - audience-adult
       authors:
-        - author-terry-pratchett
+        - person-terry-pratchett
     article-jonathan-strange-and-mr-norrell:
       title: Jonathan Strange and Mr. Norrell
-      summary: Jonathan Strange & Mr Norrell is the debut novel by British writer Susanna Clarke.
-      published: 2004-09-08 
-      body: "<p>Jonathan Strange & Mr Norrell is the debut novel by British writer Susanna Clarke. Published in 2004, it is an alternative history set in 19th-century England around the time of the Napoleonic Wars. Its premise is that magic once existed in England and has returned with two men: Gilbert Norrell and Jonathan Strange. Centred on the relationship between these two men, the novel investigates the nature of "Englishness" and the boundaries between reason and unreason, Anglo-Saxon and Anglo-Dane, and Northern and Southern English cultural tropes/stereotypes. It has been described as a fantasy novel, an alternative history, and a historical novel. It inverts the Industrial Revolution conception of the North–South divide in England: in this book the North is romantic and magical, rather than rational and concrete.</p>"
+      summary: Jonathan Strange & Mr Norrell is the debut novel by British writer Susanna Clarke.
+      published: 2004-09-08
+      body: "<p>The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US. The novel's first appearance in hardcover was in 1898 from publisher William Heinemann of London. Written between 1895 and 1897, it is one of the earliest stories to detail a conflict between mankind and an extra-terrestrial race. The novel is the first-person narrative of both an unnamed protagonist in Surrey and of his younger brother in London as southern England is invaded by Martians. The novel is one of the most commented-on works in the science fiction canon.</p>"
       topics:
         - topic-fantasy
       audiences:
         - audience-adult
       authors:
-        - author-susanna-clarke
+        - person-susanna-clarke
     article-lion-witch-wardrobe:
       title: The Lion, The Witch and the Wardrobe
-      summary: The Lion, the Witch and the Wardrobe is a fantasy novel for children by C. S. Lewis, published by Geoffrey Bles in 1950.
-      published: 1950-10-16 
-      body: "<p>The Lion, the Witch and the Wardrobe is a fantasy novel for children by C. S. Lewis, published by Geoffrey Bles in 1950. It is the first published and best known of seven novels in The Chronicles of Narnia (1950–1956). Among all the author's books, it is also the most widely held in libraries. Although it was originally the first of The Chronicles of Narnia, it is volume two in recent editions that are sequenced by the stories' chronology. Like the other Chronicles, it was illustrated by Pauline Baynes, and her work has been retained in many later editions.</p>"
+      summary: The Lion, the Witch and the Wardrobe is a fantasy novel for children by C. S. Lewis, published by Geoffrey Bles in 1950.
+      published: 1950-10-16
+      body: "<p>The Lion, the Witch and the Wardrobe is a fantasy novel for children by C. S. Lewis, published by Geoffrey Bles in 1950. It is the first published and best known of seven novels in The Chronicles of Narnia (1950–1956). Among all the author's books, it is also the most widely held in libraries. Although it was originally the first of The Chronicles of Narnia, it is volume two in recent editions that are sequenced by the stories' chronology. Like the other Chronicles, it was illustrated by Pauline Baynes, and her work has been retained in many later editions.</p>"
       topics:
         - topic-fantasy
       audiences:
         - audience-youth
         - audience-adult
       authors:
-        - author-c-s-lewis
+        - person-c-s-lewis
     article-wrinkle-in-time:
       title: A Wrinkle in Time
-      summary: A Wrinkle in Time is a young adult novel written by American author Madeleine L'Engle.
-      published: 1862-01-01 
-      body: "<p>A Wrinkle in Time is a young adult novel written by American author Madeleine L'Engle. First published in 1962, the book has won the Newbery Medal, the Sequoyah Book Award, the Lewis Carroll Shelf Award, and was runner-up for the Hans Christian Andersen Award. The main characters—Meg Murry, Charles Wallace Murry, and Calvin O'Keefe—embark on a journey through space and time, from universe to universe, as they endeavor to save the Murrys' father and the world. The novel offers a glimpse into the war between light and darkness, and good and evil, as the young characters mature into adolescents on their journey. The novel wrestles with questions of spirituality and purpose, as the characters are often thrown into conflicts of love, divinity, and goodness. It is the first book in L'Engle's Time Quintet, which follows the Murrys and Calvin O'Keefe.</p>"
+      summary: A Wrinkle in Time is a young adult novel written by American author Madeleine L'Engle.
+      published: 1862-01-01
+      body: "<p>A Wrinkle in Time is a young adult novel written by American author Madeleine L'Engle. First published in 1962, the book has won the Newbery Medal, the Sequoyah Book Award, the Lewis Carroll Shelf Award, and was runner-up for the Hans Christian Andersen Award. The main characters—Meg Murry, Charles Wallace Murry, and Calvin O'Keefe—embark on a journey through space and time, from universe to universe, as they endeavor to save the Murrys' father and the world. The novel offers a glimpse into the war between light and darkness, and good and evil, as the young characters mature into adolescents on their journey. The novel wrestles with questions of spirituality and purpose, as the characters are often thrown into conflicts of love, divinity, and goodness. It is the first book in L'Engle's Time Quintet, which follows the Murrys and Calvin O'Keefe.</p>"
       topics:
         - topic-sci-fi
-        - topic-fantasy       
+        - topic-fantasy
       audiences:
         - audience-youth
       authors:
-        - author-madeleine-l-engle
+        - person-madeleine-l-engle
     article-diary-wimpy-kid:
       title: Diary of a Wimpy Kid
-      summary: Diary of a Wimpy Kid is a series of fiction books written by the American author and cartoonist Jeff Kinney.
-      published: 2004-01-01 
-      body: "<p>Diary of a Wimpy Kid is a series of fiction books written by the American author and cartoonist Jeff Kinney. All the main books are the journals of the main character, Greg Heffley. Befitting a teen's diary, the books are filled with simple drawings of Greg's daily adventures.</p>"
+      summary: Diary of a Wimpy Kid is a series of fiction books written by the American author and cartoonist Jeff Kinney.
+      published: 2004-01-01
+      body: "<p>Diary of a Wimpy Kid is a series of fiction books written by the American author and cartoonist Jeff Kinney. All the main books are the journals of the main character, Greg Heffley. Befitting a teen's diary, the books are filled with simple drawings of Greg's daily adventures.</p>"
       topics:
         - topic-comedic-fiction
       audiences:
         - audience-youth
       authors:
-        - author-jeff-kinney
+        - person-jeff-kinney
     article-the-twitts:
       title: The Twits
-      summary: The Twits is a humorous children's book written by Roald Dahl and illustrated by Quentin Blake. It was written in 1979, and first published in 1980. The Twits was adapted for the stage in November 2007.
-      published: 1980-01-01 
+      summary: The Twits is a humorous children's book written by Roald Dahl and illustrated by Quentin Blake. It was written in 1979, and first published in 1980. The Twits was adapted for the stage in November 2007.
+      published: 1980-01-01
       body: "<p>The Twits is a humorous children's book written by Roald Dahl and illustrated by Quentin Blake. It was written in 1979, and first published in 1980. The Twits was adapted for the stage in November 2007.</p>"
       topics:
         - topic-comedic-fiction
       audiences:
         - audience-youth
       authors:
-        - author-roald-dahl
+        - person-roald-dahl
     article-bridget-jones-diary:
       title: Bridget Jones' Diary
-      summary: Bridget Jones's Diary is a 1996 novel by Helen Fielding.
-      published: 1996-01-01 
-      body: "<p>Bridget Jones's Diary is a 1996 novel by Helen Fielding. Written in the form of a personal diary, the novel chronicles a year in the life of Bridget Jones, a thirty-something single working woman living in London. She writes about her career, self-image, vices, family, friends, and romantic relationships.</p>"
+      summary: Bridget Jones's Diary is a 1996 novel by Helen Fielding.
+      published: 1996-01-01
+      body: "<p>Bridget Jones's Diary is a 1996 novel by Helen Fielding. Written in the form of a personal diary, the novel chronicles a year in the life of Bridget Jones, a thirty-something single working woman living in London. She writes about her career, self-image, vices, family, friends, and romantic relationships.</p>"
       topics:
         - topic-comedic-fiction
       audiences:
         - audience-adult
       authors:
-        - author-helen-fielding
+        - person-helen-fielding
     article-thank-you-jeeves:
       title: Thank You, Jeeves
-      summary: Thank You, Jeeves is a Jeeves comic novel by P.G. Wodehouse, first published in the United Kingdom on 16 March 1934 by Herbert Jenkins, London, and in the United States on 23 April 1934 by Little, Brown and Company, New York.
+      summary: Thank You, Jeeves is a Jeeves comic novel by P.G. Wodehouse, first published in the United Kingdom on 16 March 1934 by Herbert Jenkins, London, and in the United States on 23 April 1934 by Little, Brown and Company, New York.
       published: 1934-03-16
-      body: "<p>Thank You, Jeeves is a Jeeves comic novel by P.G. Wodehouse, first published in the United Kingdom on 16 March 1934 by Herbert Jenkins, London, and in the United States on 23 April 1934 by Little, Brown and Company, New York.</p>"
+      body: "<p>Thank You, Jeeves is a Jeeves comic novel by P.G. Wodehouse, first published in the United Kingdom on 16 March 1934 by Herbert Jenkins, London, and in the United States on 23 April 1934 by Little, Brown and Company, New York.</p>"
       topics:
         - topic-comedic-fiction
       audiences:
         - audience-adult
       authors:
-        - author-p-g-wodehouse
+        - person-p-g-wodehouse
     article-enders-game:
       title: Ender's Game
-      summary: Ender's Game is a 1985 military science fiction novel by American author Orson Scott Card.
-      published: 1985-01-01 
-      body: "<p>Ender's Game is a 1985 military science fiction novel by American author Orson Scott Card. Set at an unspecified date in Earth's future, the novel presents an imperiled humankind after two conflicts with the Formics, an insectoid alien species they dub the "buggers". In preparation for an anticipated third invasion, children, including the novel's protagonist, Andrew "Ender" Wiggin, are trained from a very young age by putting them through increasingly difficult games, including some in zero gravity, where Ender's tactical genius is revealed.</p>"
+      summary: Ender's Game is a 1985 military science fiction novel by American author Orson Scott Card.
+      published: 1985-01-01
+      body: "<p>The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US. The novel's first appearance in hardcover was in 1898 from publisher William Heinemann of London. Written between 1895 and 1897, it is one of the earliest stories to detail a conflict between mankind and an extra-terrestrial race. The novel is the first-person narrative of both an unnamed protagonist in Surrey and of his younger brother in London as southern England is invaded by Martians. The novel is one of the most commented-on works in the science fiction canon.</p>"
       topics:
         - topic-sci-fi
       audiences:
         - audience-youth
-        - audience-adult        
+        - audience-adult
       authors:
-        - author-orson-scott-card
+        - person-orson-scott-card
     article-lion-of-mars:
       title: The Lion of Mars
-      summary: Blast off with New York Times bestselling and Newbery Honor-winning Jennifer L. Holm’s out-of-this-world new novel about a kid raised on Mars who learns that he can’t be held back by the fears of the grown-ups around him.
-      published: 2021-01-05 
+      summary: Blast off with New York Times bestselling and Newbery Honor-winning Jennifer L. Holm’s out-of-this-world new novel about a kid raised on Mars who learns that he can’t be held back by the fears of the grown-ups around him.
+      published: 2021-01-05
       body: "<p>Blast off with New York Times bestselling and Newbery Honor-winning Jennifer L. Holm’s out-of-this-world new novel about a kid raised on Mars who learns that he can’t be held back by the fears of the grown-ups around him.</p>"
       topics:
         - topic-sci-fi
       audiences:
         - audience-youth
       authors:
-        - author-jennifer-l-holm
+        - person-jennifer-l-holm
     article-13-storey-tree-house:
       title: The 13-Storey Tree House
-      summary: The 13-Story Treehouse is a 2011 book written by author Andy Griffiths and illustrated by Terry Denton, and a stage play based on the book.
-      published: 2011-01-01 
-      body: "<p>The 13-Story Treehouse is a 2011 book written by author Andy Griffiths and illustrated by Terry Denton, and a stage play based on the book. The story follows Andy and Terry, who are living in a 13-story treehouse, struggling to finish their book on time among many distractions and their friend Jill, who lives in a house full of animals and often visits them. According to the book, the 13-story treehouse has 'a bowling alley, a see-through swimming pool, a tank full of man-eating sharks, a secret underground laboratory, a vegetable vaporizer and a marshmallow machine that shoots marshmallows into your mouths when it sees that you are hungry'.</p>"
+      summary: The 13-Story Treehouse is a 2011 book written by author Andy Griffiths and illustrated by Terry Denton, and a stage play based on the book.
+      published: 2011-01-01
+      body: "<p>The 13-Story Treehouse is a 2011 book written by author Andy Griffiths and illustrated by Terry Denton, and a stage play based on the book. The story follows Andy and Terry, who are living in a 13-story treehouse, struggling to finish their book on time among many distractions and their friend Jill, who lives in a house full of animals and often visits them. According to the book, the 13-story treehouse has 'a bowling alley, a see-through swimming pool, a tank full of man-eating sharks, a secret underground laboratory, a vegetable vaporizer and a marshmallow machine that shoots marshmallows into your mouths when it sees that you are hungry'.</p>"
       topics:
         - topic-comedic-fiction
       audiences:
         - audience-youth
       authors:
-        - author-andy-griffith
+        - person-andy-griffith
     article-hitchhikers-guide-to-the-galaxy:
       title: The Hitchhiker's Guide to the Galaxy
-      summary: The Hitchhiker's Guide to the Galaxy (sometimes referred to as HG2G, HHGTTG, H2G2, or tHGttG) is a comedy science fiction series created by Douglas Adams.
-      published: 1978-01-01 
-      body: "<p>The Hitchhiker's Guide to the Galaxy (sometimes referred to as HG2G, HHGTTG, H2G2, or tHGttG) is a comedy science fiction series created by Douglas Adams. Originally a 1978 radio comedy broadcast on BBC Radio 4, it was later adapted to other formats, including stage shows, novels, comic books, a 1981 TV series, a 1984 video game, and 2005 feature film.</p>"
+      summary: The Hitchhiker's Guide to the Galaxy (sometimes referred to as HG2G, HHGTTG, H2G2, or tHGttG) is a comedy science fiction series created by Douglas Adams.
+      published: 1978-01-01
+      body: "<p>The Hitchhiker's Guide to the Galaxy (sometimes referred to as HG2G, HHGTTG, H2G2, or tHGttG) is a comedy science fiction series created by Douglas Adams. Originally a 1978 radio comedy broadcast on BBC Radio 4, it was later adapted to other formats, including stage shows, novels, comic books, a 1981 TV series, a 1984 video game, and 2005 feature film.</p>"
       topics:
         - topic-comedic-fiction
-        - topic-sci-fi       
+        - topic-sci-fi
       audiences:
         - audience-adult
       authors:
-        - author-douglas-adams
+        - person-douglas-adams
     article-cold-comfort-farm:
       title: Cold Comfort Farm
-      summary: Cold Comfort Farm is a comic novel by English author Stella Gibbons, published in 1932.
-      published: 1932-09-08 
+      summary: Cold Comfort Farm is a comic novel by English author Stella Gibbons, published in 1932.
+      published: 1932-09-08
       body: "<p>Cold Comfort Farm is a comic novel by English author Stella Gibbons, published in 1932. It parodies the romanticised, sometimes doom-laden accounts of rural life popular at the time, by writers such as Mary Webb.</p>"
       topics:
         - topic-comedic-fiction
       audiences:
         - audience-adult
       authors:
-        - author-stella-gibbons
-
-  event:
-    event-x:
-      title: Adult Sci-fi article
-      body: Article 1 body
-      topics:
-        - topic-sci-fi
-      audiences:
-        - audience-adult
-
-     
-region:
-  content-bottom:
-    - personified-data-next-cta        
-
-        
-menu:
-  main-nvigation:
-    - page-home
-    - page-articles
-    - page-events
-    - page-people
-    - page-search
-  secondary:
-    - page-about
-    - page-contact
-  footer:
-    - tac
-    - privacy
+        - person-stella-gibbons
