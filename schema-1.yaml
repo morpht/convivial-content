@@ -138,6 +138,9 @@ content-type:
     components:
       type: paragraphs
       field: field_components
+    key:
+      type: text
+      field: field_key
 
   page:
     title: content-type-title
@@ -208,6 +211,9 @@ content-type:
     goal:
       type: ref
       field: field_goal
+    published:
+      type: date
+      field: field_published
 
   event:
     title: content-type-title
@@ -253,6 +259,9 @@ content-type:
     body:
       type: html
       field: field_body
+    key:
+      type: text
+      field: field_key
 
   place:
     title: content-type-title

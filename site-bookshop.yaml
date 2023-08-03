@@ -375,8 +375,6 @@ content-type:
         - audience-adult
       authors:
         - person-h-g-wells
-      suitable_for:
-        - audience-adult
       intent:
         - intent-signup
     article-2001-space-odyssey:
