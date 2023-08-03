@@ -119,56 +119,61 @@ content-block:
       endpoint: /data/tasks
       template: promotion-plain
       parameter:
-        parameter:
-          - endpoint-key: key
-            source-key: season
-            source-type: local_storage
-            default-value: default_value
+        -
+          type: parameter
+          endpoint-key: key
+          source-key: audience
+          source-type: localstorage
+          default: audience-general
 
     personified-data-topic-news:
       info: Topic news
       endpoint: /data/articles
       template: item-image-card
       parameter:
-        parameter:
-          - endpoint-key: key
-            source-key: topic
-            source-type: local_storage
-            default-value:
+        -
+          type: parameter
+          endpoint-key: key
+          source-key: topic
+          source-type: localstorage
+          default:
 
     personified-data-season-banner:
       info: Season banner
       endpoint: /data/promotion
       template: item-teaser
       parameter:
-        parameter:
-          - endpoint-key: type
-            source-key:
-            source-type: constant
-            default-value: promotion-type-season-banner
-          - endpoint-key: key
-            source-key: season
-            source-type: local_storage
-            default-value:
-
+        -
+          type: parameter
+          endpoint-key: type
+          source-key:
+          source-type: constant
+          default: promotion-type-season-banner    
+        -
+          type: parameter
+          endpoint-key: key
+          source-key: season
+          source-type: localstorage
+          default:
 
     personified-data-next-cta:
       info: Next CTA
       endpoint: /data/promotion
       template: item-teaser
-      # This is the schema key name, which can also be the field name.
       parameter:
-        # This is the paragraph type name.
-        parameter:
-          - endpoint-key: type
-            source-key:
-            source-type: constant
-            default-value: promotion-type-next-cta
-          - endpoint-key: key
-            source-key: next
-            source-type: local_storage
-            default-value:
-
+        -
+          type: parameter
+          endpoint-key: type
+          source-key:
+          source-type: constant
+          default: promotion-type-next-cta    
+        -
+          type: parameter
+          endpoint-key: key
+          source-key: next
+          source-type: localstorage
+          default:  
+        
 
 content-type:
 
@@ -213,16 +218,20 @@ content-type:
       body: Page 1 body
       thumbnail: image-site
       introduction: "<p class=intro>A personalised bookshop.</p>"
+      # content_block is the paragraph type name.
       components:
-        # content_block is the paragraph type name.
-        content_block:
-          - heading: Audience tasks
-            cb-block: personified-data-audience-tasks
-          - heading: Topic news
-            cb-block: personified-data-topic-news
-            hide-heading: FALSE
-          - heading: Season Banner
-            cb-block: personified-data-season-banner
+        -
+          type: content_block
+          block: personified-data-audience-tasks
+          heading: Audience tasks
+        -
+          type: content_block
+          block: personified-data-topic-news    
+          heading: Topic news
+        -
+          type: content_block
+          block: personified-data-season-banner 
+          heading: Season Banner
     page-tac:
       alias: /tac
       title: Terms and Conditions

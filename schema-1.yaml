@@ -68,7 +68,7 @@ paragraphs:
 # The paragraph type's machine name should be the same in Drupal.
   parameter:
     name: parameter-name
-    default-value:
+    default:
       type: text
       field: field_parameter_default_value
     endpoint-key:
@@ -88,7 +88,7 @@ paragraphs:
     body:
       type: text
       field: field_body
-    cb-block:
+    block:
       type: block_content
       field: field_cb_block
     hide-heading:
