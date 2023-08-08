@@ -256,6 +256,66 @@ content-type:
       summary: Contact
       introduction: "<p class=intro>A personalised bookshop.</p>"
       body: "<p><a href='https://www.morpht.com/contact'>Contact Morpht></a></p>"
+    page-search:
+      alias: /search
+      title: Search
+      summary: Search the bookshop.
+      thumbnail: image-search
+      introduction: "<p class=intro>Search the bookshop.</p>"
+      components:
+        -
+          type: view
+          heading: Search Block
+          block: content_search block_1
+    page-articles:
+      alias: /news
+      title: News
+      summary: Bookshop news.
+      thumbnail: image-articles
+      introduction: "<p class=intro>The latest books.</p>"
+      components:
+        -
+          type: view
+          heading: Articles Block
+          definition: articles block_1
+    page-events:
+      alias: /events
+      title: Events
+      summary: Bookshop events.
+      thumbnail: image-events
+      introduction: "<p class=intro>The latest events.</p>"
+      components:
+        -
+          type: view
+          heading: Events Block
+          definition: events block_1
+    page-authors:
+      alias: /authors
+      title: Authors
+      summary: Bookshop authors.
+      thumbnail: image-people
+      introduction: "<p class=intro>All the authors.</p>"
+      components:
+        -
+          type: view
+          heading: Authors Block
+          definition: authors block_1
+    page-catalog:
+      alias: /catalog
+      title: Catalog
+      summary: Bookshop catalog of topics and audiences.
+      thumbnail: image-catalog
+      introduction: "<p class=intro>Topics and Audiences.</p>"
+      components:
+        -
+          type: view
+          heading: Topics Block
+          definition: topics block_1
+        -
+          type: view
+          heading: Audiences Block
+          definition: audiences block_1
+
 
   person:
     person-isaac-asimov:
@@ -592,3 +652,12 @@ content-type:
         - audience-adult
       authors:
         - person-stella-gibbons
+  event:
+
+    event-x:
+      title: Adult Sci-fi article
+      body: Article 1 body
+      topics:
+        - topic-sci-fi
+      audiences:
+        - audience-adult

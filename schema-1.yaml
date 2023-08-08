@@ -3,6 +3,7 @@ schema-version: 1
 vocabulary:
 
   intent:
+  # The name field doesn't need a type a field name as its predefined in Drupal.
     name:
       type: vocabulary-name
     key:
@@ -80,7 +81,7 @@ paragraphs:
     source-type:
       type: list
       field: field_parameter_source_type
-# If the machine name contains an underscore, replace it with a hyphen.
+
   content_block:
     heading:
       type: text
@@ -94,6 +95,15 @@ paragraphs:
     hide-heading:
       type: boolean
       field: field_hide_heading
+
+  view:
+    heading:
+      type: text
+      field: field_heading
+    definition:
+      type: text
+      field: field_view_definition
+
 
 content-type:
 
