@@ -117,13 +117,13 @@ content-block:
     personified-data-audience-tasks:
       info: 'Audience tasks'
       endpoint: /data/tasks
-      template: promotion-plain
+      template: item-basic-card
       parameter:
         -
           type: parameter
           endpoint-key: key
           source-key: audience
-          source-type: localstorage
+          source-type: local_storage
           default: audience-general
 
     personified-data-topic-news:
@@ -135,7 +135,7 @@ content-block:
           type: parameter
           endpoint-key: key
           source-key: topic
-          source-type: localstorage
+          source-type: local_storage
           default:
 
     personified-data-season-banner:
@@ -153,7 +153,7 @@ content-block:
           type: parameter
           endpoint-key: key
           source-key: season
-          source-type: localstorage
+          source-type: local_storage
           default:
 
     personified-data-next-cta:
@@ -171,7 +171,7 @@ content-block:
           type: parameter
           endpoint-key: key
           source-key: next
-          source-type: localstorage
+          source-type: local_storage
           default:  
         
 
