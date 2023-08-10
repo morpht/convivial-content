@@ -128,7 +128,7 @@ content-block:
 
     personified-data-topic-news:
       info: Topic news
-      endpoint: /data/articles
+      endpoint: /data/articles-topic
       template: item-image-card
       parameter:
         -
