@@ -172,8 +172,8 @@ content-block:
           endpoint-key: key
           source-key: next
           source-type: local_storage
-          default:  
-        
+          default:
+
 
 content-type:
 
