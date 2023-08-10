@@ -183,15 +183,21 @@ content-type:
       key: audience-youth
       thumbnail: image-youth
       introduction: "<p class=intro>Youth related content.</p>"
+      summary: This is Youth
       tasks:
         - audience-youth
+        - page-contact
+        - page-about
     audience-adult:
       title: Adult
       key: audience-adult
       thumbnail: image-adult
       introduction: "<p class=intro>Adult related content.</p>"
+      summary: This is Adult
       tasks:
         - audience-adult
+        - page-article
+        - page-catalog
 
   topic:
     topic-sci-fi:
