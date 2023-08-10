@@ -46,12 +46,6 @@ media:
 
 content-block:
 
-  promotion:
-    info: content-block-info
-    heading:
-      type: text
-      field: field_heading
-
   # The block content type machine name should be the same in Drupal.
   personified_data:
     info: content-block-info
@@ -302,3 +296,22 @@ content-type:
     goal:
       type: ref
       field: field_goal
+
+micro-content:
+  promotion:
+    name: micro-content-name
+    heading:
+      type: text
+      field: field_heading
+    type:
+      type: ref
+      field: field_promo_type
+    body:
+      type: html
+      field: field_body
+    keys:
+      type: list
+      field: field_promo_keys
+    image:
+      type: media-image
+      field: field_promo_background

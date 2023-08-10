@@ -667,3 +667,87 @@ content-type:
         - topic-sci-fi
       audiences:
         - audience-adult
+
+micro-content:
+  promotion:
+    campaign-acquisition:
+      type: promotion-type-next-cta
+      name: Acquisition CTA
+      heading: Stay up to date
+      body: "<p>Our newsletter will help you stay up to date.</p><p><a href='/subscribe'>class='btn'>Subscribe</a></p>"
+      keys:
+        - acquisition
+    campaign-education:
+      type: promotion-type-next-cta
+      name: Education CTA
+      heading: Get educated
+      body: "<p>The bookshop has a lot to offer.</p><p><a href='/about'>class='btn'>Find out more</a></p>"
+      keys:
+        - education
+    stage-orientation:
+      type: promotion-type-next-cta
+      name: Orientation CTA
+      heading: Take a look around
+      body: "<p>The bookshop has a lot to offer.</p><p><a href='/about'>class='btn'>Find out more</a></p>"
+      keys:
+        - stage-orientation
+    stage-discovery:
+      type: promotion-type-next-cta
+      name: Orientation CTA
+      heading: Take a look around
+      body: "<p>The bookshop has a lot to offer.</p><p><a href='/catalog'>class='btn'>Catalog</a></p>"
+      keys:
+        - stage-discovery
+    stage-validation:
+      type: promotion-type-next-cta
+      name: Orientation CTA
+      heading: Take a look around
+      body: "<p>The bookshop has a lot to offer.</p><p><a href='/testimonials'>class='btn'>Testimonials/a></p>"
+      keys:
+        - stage-validation
+    stage-conversion:
+      type: promotion-type-next-cta
+      name: Orientation CTA
+      heading: Take a look around
+      body: "<p>The bookshop has a lot to offer.</p><p><a href='/subscribe'>class='btn'>Subscribe</a></p>"
+      keys:
+        - stage-conversion
+    stage-continue:
+      type: promotion-type-next-cta
+      name: Orientation CTA
+      heading: Take a look around
+      body: "<p>The best of books.</p><p><a href='/news'>class='btn'>News</a></p>"
+      keys:
+        - stage-continue
+    season-summer:
+      type: promotion-type-season-banner
+      name: Summer banner
+      heading: Summer reading
+      body: "<p>Just the right book for summer.</p><p><a href='/catalog'>class='btn'>Summer reading</a></p>"
+      image: image-summer
+      keys:
+        - summer
+    season-autumn:
+      type: promotion-type-season-banner
+      name: Summer banner
+      heading: Autumn reading
+      body: "<p>Just the right book for autumn.</p><p><a href='/catalog'>class='btn'>Autumn reading</a></p>"
+      image: image-autumn
+      keys:
+        - autumn
+    season-winter:
+      type: promotion-type-season-banner
+      name: Winter banner
+      heading: Winter reading
+      body: "<p>Just the right book for winter.</p><p><a href='/catalog'>class='btn'>Winter reading</a></p>"
+      image: image-winter
+      keys:
+        - winter
+    season-spring:
+      type: promotion-type-season-banner
+      name: spring banner
+      heading: Spring reading
+      body: "<p>Just the right book for spring.</p><p><a href='/catalog'>class='btn'>Spring reading</a></p>"
+      image: image-spring
+      keys:
+        - spring
