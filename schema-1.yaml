@@ -299,11 +299,11 @@ content-type:
 
 micro-content:
   promotion:
-    name: micro-content-name
+    label: micro-content-label
     heading:
       type: text
       field: field_heading
-    type:
+    promo_type:
       type: ref
       field: field_promo_type
     body:
