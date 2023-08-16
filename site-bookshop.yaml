@@ -141,20 +141,19 @@ content-block:
     personified-data-season-banner:
       info: Season banner
       endpoint: /data/promotion
-      template: item-teaser
+      template: promotion-hero
       parameter:
         -
           type: parameter
           endpoint-key: type
-          source-key:
           source-type: constant
-          default: promotion-type-season-banner    
+          default: promotion-type-season-banner
         -
           type: parameter
           endpoint-key: key
           source-key: season
           source-type: local_storage
-          default:
+          default: none
 
     personified-data-next-cta:
       info: Next CTA
@@ -173,6 +172,117 @@ content-block:
           source-key: next
           source-type: local_storage
           default:
+  promotion:
+    campaign-acquisition:
+      promo_type:
+        - promotion-type-next-cta
+      info: Acquisition CTA
+      heading: Stay up to date
+      body: "<p>Our newsletter will help you stay up to date.</p><p><a href='/subscribe' class='btn'>Subscribe</a></p>"
+      keys:
+        - acquisition
+    campaign-education:
+      promo_type:
+        - promotion-type-next-cta
+      info: Education CTA
+      heading: Get educated
+      body: "<p>The bookshop has a lot to offer.</p><p><a href='/about' class='btn'>Find out more</a></p>"
+      keys:
+        - education
+    stage-orientation:
+      promo_type:
+        - promotion-type-next-cta
+      info: Stage Orientation CTA
+      heading: Take a look around
+      body: "<p>The bookshop has a lot to offer.</p><p><a href='/about' class='btn'>Find out more</a></p>"
+      keys:
+        - stage-orientation
+    stage-discovery:
+      promo_type:
+        - promotion-type-next-cta
+      info: Stage Discovery CTA
+      heading: Take a look around
+      body: "<p>The bookshop has a lot to offer.</p><p><a href='/catalog' class='btn'>Catalog</a></p>"
+      keys:
+        - stage-discovery
+    stage-validation:
+      promo_type:
+        - promotion-type-next-cta
+      info: Stage Validation CTA
+      heading: Take a look around
+      body: "<p>The bookshop has a lot to offer.</p><p><a href='/testimonials' class='btn'>Testimonials/a></p>"
+      keys:
+        - stage-validation
+    stage-conversion:
+      promo_type:
+        - promotion-type-next-cta
+      info: Stage Conversion CTA
+      heading: Take a look around
+      body: "<p>The bookshop has a lot to offer.</p><p><a href='/subscribe' class='btn'>Subscribe</a></p>"
+      keys:
+        - stage-conversion
+    stage-continue:
+      promo_type:
+        - promotion-type-next-cta
+      info: Stage Continue CTA
+      heading: Take a look around
+      body: "<p>The best of books.</p><p><a href='/news' class='btn'>News</a></p>"
+      keys:
+        - stage-continue
+    season-summer:
+      promo_type:
+        - promotion-type-season-banner
+      info: Summer banner
+      heading: Summer reading
+      body: "<p>Just the right book for summer.</p><p><a href='/catalog' class='btn'>Summer reading</a></p>"
+      image: image-summer
+      keys:
+        - summer
+      variant: banner--box
+      position: banner--content-left
+    season-autumn:
+      promo_type:
+        - promotion-type-season-banner
+      info: Summer banner
+      heading: Autumn reading
+      body: "<p>Just the right book for autumn.</p><p><a href='/catalog' class='btn'>Autumn reading</a></p>"
+      image: image-autumn
+      keys:
+        - autumn
+      variant: banner--box
+      position: banner--content-left
+    season-winter:
+      promo_type:
+        - promotion-type-season-banner
+      info: Winter banner
+      heading: Winter reading
+      body: "<p>Just the right book for winter.</p><p><a href='/catalog' class='btn'>Winter reading</a></p>"
+      image: image-winter
+      keys:
+        - winter
+      variant: banner--box
+      position: banner--content-left
+    season-spring:
+      promo_type:
+        - promotion-type-season-banner
+      info: Spring Banner
+      heading: Spring reading
+      body: "<p>Just the right book for spring.</p><p><a href='/catalog' class='btn'>Spring reading</a></p>"
+      image: image-spring
+      keys:
+        - spring
+      variant: banner--box
+      position: banner--content-left
+    season-none:
+      promo_type:
+        - promotion-type-season-banner
+      info: None Banner
+      body: "<h2>Whatever the season a book is what you need</h2><p>We have something for you, no matter what the season.</p><p><a class=\"btn btn-primary\" href=\"/node/15\">Catalog</a></p>"
+      image: image-spring
+      keys:
+        - none
+      variant: banner--box
+      position: banner--content-left
 
 
 content-type:
@@ -667,98 +777,3 @@ content-type:
         - topic-sci-fi
       audiences:
         - audience-adult
-
-micro-content:
-  promotion:
-    campaign-acquisition:
-      promo_type:
-        - promotion-type-next-cta
-      label: Acquisition CTA
-      heading: Stay up to date
-      body: "<p>Our newsletter will help you stay up to date.</p><p><a href='/subscribe' class='btn'>Subscribe</a></p>"
-      keys:
-        - acquisition
-    campaign-education:
-      promo_type:
-        - promotion-type-next-cta
-      label: Education CTA
-      heading: Get educated
-      body: "<p>The bookshop has a lot to offer.</p><p><a href='/about' class='btn'>Find out more</a></p>"
-      keys:
-        - education
-    stage-orientation:
-      promo_type:
-        - promotion-type-next-cta
-      label: Orientation CTA
-      heading: Take a look around
-      body: "<p>The bookshop has a lot to offer.</p><p><a href='/about' class='btn'>Find out more</a></p>"
-      keys:
-        - stage-orientation
-    stage-discovery:
-      promo_type:
-        - promotion-type-next-cta
-      label: Orientation CTA
-      heading: Take a look around
-      body: "<p>The bookshop has a lot to offer.</p><p><a href='/catalog' class='btn'>Catalog</a></p>"
-      keys:
-        - stage-discovery
-    stage-validation:
-      promo_type:
-        - promotion-type-next-cta
-      label: Orientation CTA
-      heading: Take a look around
-      body: "<p>The bookshop has a lot to offer.</p><p><a href='/testimonials' class='btn'>Testimonials/a></p>"
-      keys:
-        - stage-validation
-    stage-conversion:
-      promo_type:
-        - promotion-type-next-cta
-      label: Orientation CTA
-      heading: Take a look around
-      body: "<p>The bookshop has a lot to offer.</p><p><a href='/subscribe' class='btn'>Subscribe</a></p>"
-      keys:
-        - stage-conversion
-    stage-continue:
-      promo_type:
-        - promotion-type-next-cta
-      label: Orientation CTA
-      heading: Take a look around
-      body: "<p>The best of books.</p><p><a href='/news' class='btn'>News</a></p>"
-      keys:
-        - stage-continue
-    season-summer:
-      promo_type:
-        - promotion-type-season-banner
-      label: Summer banner
-      heading: Summer reading
-      body: "<p>Just the right book for summer.</p><p><a href='/catalog' class='btn'>Summer reading</a></p>"
-      image: image-summer
-      keys:
-        - summer
-    season-autumn:
-      promo_type:
-        - promotion-type-season-banner
-      label: Summer banner
-      heading: Autumn reading
-      body: "<p>Just the right book for autumn.</p><p><a href='/catalog' class='btn'>Autumn reading</a></p>"
-      image: image-autumn
-      keys:
-        - autumn
-    season-winter:
-      promo_type:
-        - promotion-type-season-banner
-      label: Winter banner
-      heading: Winter reading
-      body: "<p>Just the right book for winter.</p><p><a href='/catalog' class='btn'>Winter reading</a></p>"
-      image: image-winter
-      keys:
-        - winter
-    season-spring:
-      promo_type:
-        - promotion-type-season-banner
-      label: Spring Banner
-      heading: Spring reading
-      body: "<p>Just the right book for spring.</p><p><a href='/catalog' class='btn'>Spring reading</a></p>"
-      image: image-spring
-      keys:
-        - spring

@@ -59,6 +59,30 @@ content-block:
       type: paragraphs
       field: field_personified_parameters
 
+  promotion:
+    info: micro-content-label
+    heading:
+      type: text
+      field: field_heading
+    promo_type:
+      type: ref
+      field: field_promo_type
+    body:
+      type: html
+      field: field_body
+    keys:
+      type: list
+      field: field_promo_keys
+    image:
+      type: media-image
+      field: field_promo_background
+    variant:
+      type: text
+      field: field_promo_variant
+    position:
+      type: text
+      field: field_promo_position
+
 paragraphs:
 # The paragraph type's machine name should be the same in Drupal.
   parameter:
@@ -296,22 +320,4 @@ content-type:
     goal:
       type: ref
       field: field_goal
-
-micro-content:
-  promotion:
-    label: micro-content-label
-    heading:
-      type: text
-      field: field_heading
-    promo_type:
-      type: ref
-      field: field_promo_type
-    body:
-      type: html
-      field: field_body
-    keys:
-      type: list
-      field: field_promo_keys
-    image:
-      type: media-image
-      field: field_promo_background
+  
