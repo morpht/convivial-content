@@ -183,6 +183,15 @@ content-type:
     introduction:
       type: html
       field: field_introduction
+    banner_image:
+      type: media-image
+      field: field_banner_image
+    header_colour_classes:
+      type: text
+      field: field_header_colour_classes
+    field_hero_darkness:
+      type: text
+      field: field_hero_darkness
     body:
       type: html
       field: field_body

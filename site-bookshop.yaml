@@ -173,7 +173,7 @@ content-block:
           source-type: local_storage
           default:
   promotion:
-    campaign-acquisition:
+    promotion-campaign-acquisition:
       promo_type:
         - promotion-type-next-cta
       info: Acquisition CTA
@@ -181,7 +181,7 @@ content-block:
       body: "<p>Our newsletter will help you stay up to date.</p><p><a href='/subscribe' class='btn'>Subscribe</a></p>"
       keys:
         - acquisition
-    campaign-education:
+    promotion-campaign-education:
       promo_type:
         - promotion-type-next-cta
       info: Education CTA
@@ -189,7 +189,7 @@ content-block:
       body: "<p>The bookshop has a lot to offer.</p><p><a href='/about' class='btn'>Find out more</a></p>"
       keys:
         - education
-    stage-orientation:
+    promotion-stage-orientation:
       promo_type:
         - promotion-type-next-cta
       info: Stage Orientation CTA
@@ -197,7 +197,7 @@ content-block:
       body: "<p>The bookshop has a lot to offer.</p><p><a href='/about' class='btn'>Find out more</a></p>"
       keys:
         - stage-orientation
-    stage-discovery:
+    promotion-stage-discovery:
       promo_type:
         - promotion-type-next-cta
       info: Stage Discovery CTA
@@ -205,7 +205,7 @@ content-block:
       body: "<p>The bookshop has a lot to offer.</p><p><a href='/catalog' class='btn'>Catalog</a></p>"
       keys:
         - stage-discovery
-    stage-validation:
+    promotion-stage-validation:
       promo_type:
         - promotion-type-next-cta
       info: Stage Validation CTA
@@ -213,7 +213,7 @@ content-block:
       body: "<p>The bookshop has a lot to offer.</p><p><a href='/testimonials' class='btn'>Testimonials/a></p>"
       keys:
         - stage-validation
-    stage-conversion:
+    promotion-stage-conversion:
       promo_type:
         - promotion-type-next-cta
       info: Stage Conversion CTA
@@ -221,7 +221,7 @@ content-block:
       body: "<p>The bookshop has a lot to offer.</p><p><a href='/subscribe' class='btn'>Subscribe</a></p>"
       keys:
         - stage-conversion
-    stage-continue:
+    promotion-stage-continue:
       promo_type:
         - promotion-type-next-cta
       info: Stage Continue CTA
@@ -229,7 +229,7 @@ content-block:
       body: "<p>The best of books.</p><p><a href='/news' class='btn'>News</a></p>"
       keys:
         - stage-continue
-    season-summer:
+    promotion-season-summer:
       promo_type:
         - promotion-type-season-banner
       info: Summer banner
@@ -240,7 +240,7 @@ content-block:
         - summer
       variant: banner--box
       position: banner--content-left
-    season-autumn:
+    promotion-season-autumn:
       promo_type:
         - promotion-type-season-banner
       info: Summer banner
@@ -251,7 +251,7 @@ content-block:
         - autumn
       variant: banner--box
       position: banner--content-left
-    season-winter:
+    promotion-season-winter:
       promo_type:
         - promotion-type-season-banner
       info: Winter banner
@@ -262,7 +262,7 @@ content-block:
         - winter
       variant: banner--box
       position: banner--content-left
-    season-spring:
+    promotion-season-spring:
       promo_type:
         - promotion-type-season-banner
       info: Spring Banner
@@ -273,7 +273,7 @@ content-block:
         - spring
       variant: banner--box
       position: banner--content-left
-    season-none:
+    promotion-season-none:
       promo_type:
         - promotion-type-season-banner
       info: None Banner
@@ -296,8 +296,9 @@ content-type:
       summary: This is Youth
       tasks:
         - audience-youth
-        - page-contact
-        - page-about
+        - article-enders-game
+        - article-war-of-the-worlds
+
     audience-adult:
       title: Adult
       key: audience-adult
@@ -306,7 +307,7 @@ content-type:
       summary: This is Adult
       tasks:
         - audience-adult
-        - page-article
+        - article-bridget-jones-diary
         - page-catalog
 
   topic:
@@ -330,24 +331,23 @@ content-type:
     page-home:
       alias: /
       title: Bookshop
-      summary: Bookshop demo.
-      body: Page 1 body
+      summary: Convivial Demo is a Drupal demo site produced by Morpht which offers advanced personalization features out of the box.
       thumbnail: image-site
-      introduction: "<p class=intro>A personalised bookshop.</p>"
-      # content_block is the paragraph type name.
+      introduction: "<h2>Hello! Welcome to the Convivial CXP demo</h2><p class=\"introduction\">Convivial CXP is a personalisation enabled content experience platform built on Drupal. This is a \"bookshop\" demonstration site, showcasing many of its features.</p><p class=\"introduction\">Convivial CXP is a lightweight composable, personalisation solution for those looking for an alternative to heavier stacks which require vendor lock in.</p>"
+      banner_image: image-site
+      header_colour_classes: cp cp--dark
+      hero_darkness: hero-background--dark-image
       components:
         -
           type: content_block
           block: personified-data-audience-tasks
-          heading: Audience tasks
         -
           type: content_block
-          block: personified-data-topic-news    
+          block: personified-data-topic-news
           heading: Topic news
         -
           type: content_block
-          block: personified-data-season-banner 
-          heading: Season Banner
+          block: personified-data-season-banner
     page-tac:
       alias: /tac
       title: Terms and Conditions
@@ -547,8 +547,6 @@ content-type:
         - audience-adult
       authors:
         - person-isaac-asimov
-      intent:
-        - intent-signup
     article-war-of-the-worlds:
       title: The War of the Worlds
       summary: The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US.
