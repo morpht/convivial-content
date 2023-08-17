@@ -775,3 +775,15 @@ content-type:
         - topic-sci-fi
       audiences:
         - audience-adult
+
+menu:
+  main:
+    - page-about
+    - page-events
+    - page-articles
+    - page-authors
+    - page-catalog
+    - page-search
+  footer:
+    - page-tac
+    - page-privacy

@@ -189,7 +189,7 @@ content-type:
     header_colour_classes:
       type: text
       field: field_header_colour_classes
-    field_hero_darkness:
+    hero_darkness:
       type: text
       field: field_hero_darkness
     body:
@@ -329,4 +329,3 @@ content-type:
     goal:
       type: ref
       field: field_goal
-  
