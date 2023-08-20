@@ -296,6 +296,7 @@ content-type:
         - audience-youth
         - audience-adult
         - page-contact
+      search_exclude: true
     audience-youth:
       title: Youth
       key: audience-youth
@@ -781,13 +782,9 @@ content-type:
   event:
 
     event-x:
-      title: Adult Sci-fi article
+      title: Adult Sci-fi article Event
       body: Article 1 body
       summary: Example Summary for event.
-      topics:
-        - topic-sci-fi
-      audiences:
-        - audience-adult
       duration: 2 hours
       date: "2023-10-26T07:24:38"
 

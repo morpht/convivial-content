@@ -151,6 +151,9 @@ content-type:
     key:
       type: text
       field: field_key
+    search_exclude:
+      type: boolean
+      field: field_search_exclude
 
   topic:
     title: content-type-title
