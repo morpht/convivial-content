@@ -564,7 +564,7 @@ content-type:
     article-war-of-the-worlds:
       title: The War of the Worlds
       summary: The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US.
-      published: 1900-01-01
+      published: "1900-01-01"
       body: "<p>The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US. The novel's first appearance in hardcover was in 1898 from publisher William Heinemann of London. Written between 1895 and 1897, it is one of the earliest stories to detail a conflict between mankind and an extra-terrestrial race. The novel is the first-person narrative of both an unnamed protagonist in Surrey and of his younger brother in London as southern England is invaded by Martians. The novel is one of the most commented-on works in the science fiction canon.</p>"
       topics:
         - topic-sci-fi
@@ -577,7 +577,7 @@ content-type:
     article-2001-space-odyssey:
       title: "2001: A Space Odyssey"
       summary: "2001: A Space Odyssey is the 1968 science fiction novel written by Arthur C. Clarke and the 1968 film directed by Stanley Kubrick."
-      published: 1968-01-01
+      published: "1968-01-01"
       body: "<p>The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US. The novel's first appearance in hardcover was in 1898 from publisher William Heinemann of London. Written between 1895 and 1897, it is one of the earliest stories to detail a conflict between mankind and an extra-terrestrial race. The novel is the first-person narrative of both an unnamed protagonist in Surrey and of his younger brother in London as southern England is invaded by Martians. The novel is one of the most commented-on works in the science fiction canon.</p>"
       topics:
         - topic-sci-fi
@@ -588,7 +588,7 @@ content-type:
     article-the-time-machine:
       title: The Time Machine
       summary: The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
-      published: 1900-01-01
+      published: "1900-01-01"
       body: "<p>The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US. The novel's first appearance in hardcover was in 1898 from publisher William Heinemann of London. Written between 1895 and 1897, it is one of the earliest stories to detail a conflict between mankind and an extra-terrestrial race. The novel is the first-person narrative of both an unnamed protagonist in Surrey and of his younger brother in London as southern England is invaded by Martians. The novel is one of the most commented-on works in the science fiction canon.</p>"
       topics:
         - topic-sci-fi
@@ -599,7 +599,7 @@ content-type:
     article-dragon-rider:
       title: Dragon Rider
       summary: "Dragon Rider (original title: Drachenreiter) is a 1997 German children's novel by Cornelia Funke."
-      published: 1997-01-01
+      published: "1997-01-01"
       body: "<p>Dragon Rider (original title: Drachenreiter) is a 1997 German children's novel by Cornelia Funke. Originally translated by Oliver Latsch, Dragon Rider was published in English in 2004 by The Chicken House in the UK and Scholastic Inc. in the US, using a translation by Anthea Bell. Dragon Rider follows the exploits of a silver dragon named Firedrake, a brownie named Sorrel, and Ben, a human boy, in their search for the mythical part of the Himalayas mountain range called the Rim of Heaven to find a safe place for Firedrake's kin to live when the dragon finds out that humans intend to flood the valley where he and his fellow dragons live.</p>"
       topics:
         - topic-fantasy
@@ -610,7 +610,7 @@ content-type:
     article-philosophers-stone:
       title: Harry Potter and the Philosopher's Stone
       summary: Harry Potter and the Philosopher's Stone is a fantasy novel written by British author J. K. Rowling.
-      published: 1997-06-26
+      published: "1997-06-26"
       body: "<p>Harry Potter and the Philosopher's Stone is a fantasy novel written by British author J. K. Rowling. The first novel in the Harry Potter series and Rowling's debut novel, it follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday, when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry. Harry makes close friends and a few enemies during his first year at the school, and with the help of his friends, he faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.</p>"
       topics:
         - topic-fantasy
@@ -619,12 +619,10 @@ content-type:
         - audience-adult
       authors:
         - person-j-k-rowling
-      intent:
-        - intent-signup
     article-lord-of-the-rings:
       title: Lord of the Rings
       summary: The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R. R. Tolkien.
-      published: 1954-07-29
+      published: "1954-07-29"
       body: "<p>The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R. R. Tolkien. Set in Middle-earth, the world at some distant time in the past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work. Written in stages between 1937 and 1949, The Lord of the Rings is one of the best-selling books ever written, with over 150 million copies sold.</p>"
       topics:
         - topic-fantasy
@@ -636,7 +634,7 @@ content-type:
     article-colour-of-magic:
       title: The Colour of Magic
       summary: The Colour of Magic is a 1983 fantasy comedy novel by Terry Pratchett, and is the first book of the Discworld series.
-      published: 1983-11-24
+      published: "1983-11-24"
       body: "<p>The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US. The novel's first appearance in hardcover was in 1898 from publisher William Heinemann of London. Written between 1895 and 1897, it is one of the earliest stories to detail a conflict between mankind and an extra-terrestrial race. The novel is the first-person narrative of both an unnamed protagonist in Surrey and of his younger brother in London as southern England is invaded by Martians. The novel is one of the most commented-on works in the science fiction canon.</p>"
       topics:
         - topic-fantasy
@@ -647,7 +645,7 @@ content-type:
     article-jonathan-strange-and-mr-norrell:
       title: Jonathan Strange and Mr. Norrell
       summary: Jonathan Strange & Mr Norrell is the debut novel by British writer Susanna Clarke.
-      published: 2004-09-08
+      published: "2004-09-08"
       body: "<p>The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US. The novel's first appearance in hardcover was in 1898 from publisher William Heinemann of London. Written between 1895 and 1897, it is one of the earliest stories to detail a conflict between mankind and an extra-terrestrial race. The novel is the first-person narrative of both an unnamed protagonist in Surrey and of his younger brother in London as southern England is invaded by Martians. The novel is one of the most commented-on works in the science fiction canon.</p>"
       topics:
         - topic-fantasy
@@ -658,7 +656,7 @@ content-type:
     article-lion-witch-wardrobe:
       title: The Lion, The Witch and the Wardrobe
       summary: The Lion, the Witch and the Wardrobe is a fantasy novel for children by C. S. Lewis, published by Geoffrey Bles in 1950.
-      published: 1950-10-16
+      published: "1950-10-16"
       body: "<p>The Lion, the Witch and the Wardrobe is a fantasy novel for children by C. S. Lewis, published by Geoffrey Bles in 1950. It is the first published and best known of seven novels in The Chronicles of Narnia (1950–1956). Among all the author's books, it is also the most widely held in libraries. Although it was originally the first of The Chronicles of Narnia, it is volume two in recent editions that are sequenced by the stories' chronology. Like the other Chronicles, it was illustrated by Pauline Baynes, and her work has been retained in many later editions.</p>"
       topics:
         - topic-fantasy
@@ -670,7 +668,7 @@ content-type:
     article-wrinkle-in-time:
       title: A Wrinkle in Time
       summary: A Wrinkle in Time is a young adult novel written by American author Madeleine L'Engle.
-      published: 1862-01-01
+      published: "1862-01-01"
       body: "<p>A Wrinkle in Time is a young adult novel written by American author Madeleine L'Engle. First published in 1962, the book has won the Newbery Medal, the Sequoyah Book Award, the Lewis Carroll Shelf Award, and was runner-up for the Hans Christian Andersen Award. The main characters—Meg Murry, Charles Wallace Murry, and Calvin O'Keefe—embark on a journey through space and time, from universe to universe, as they endeavor to save the Murrys' father and the world. The novel offers a glimpse into the war between light and darkness, and good and evil, as the young characters mature into adolescents on their journey. The novel wrestles with questions of spirituality and purpose, as the characters are often thrown into conflicts of love, divinity, and goodness. It is the first book in L'Engle's Time Quintet, which follows the Murrys and Calvin O'Keefe.</p>"
       topics:
         - topic-sci-fi
@@ -682,7 +680,7 @@ content-type:
     article-diary-wimpy-kid:
       title: Diary of a Wimpy Kid
       summary: Diary of a Wimpy Kid is a series of fiction books written by the American author and cartoonist Jeff Kinney.
-      published: 2004-01-01
+      published: "2004-01-01"
       body: "<p>Diary of a Wimpy Kid is a series of fiction books written by the American author and cartoonist Jeff Kinney. All the main books are the journals of the main character, Greg Heffley. Befitting a teen's diary, the books are filled with simple drawings of Greg's daily adventures.</p>"
       topics:
         - topic-comedic-fiction
@@ -693,7 +691,7 @@ content-type:
     article-the-twitts:
       title: The Twits
       summary: The Twits is a humorous children's book written by Roald Dahl and illustrated by Quentin Blake. It was written in 1979, and first published in 1980. The Twits was adapted for the stage in November 2007.
-      published: 1980-01-01
+      published: "1980-01-01"
       body: "<p>The Twits is a humorous children's book written by Roald Dahl and illustrated by Quentin Blake. It was written in 1979, and first published in 1980. The Twits was adapted for the stage in November 2007.</p>"
       topics:
         - topic-comedic-fiction
@@ -704,7 +702,7 @@ content-type:
     article-bridget-jones-diary:
       title: Bridget Jones' Diary
       summary: Bridget Jones's Diary is a 1996 novel by Helen Fielding.
-      published: 1996-01-01
+      published: "1996-01-01"
       body: "<p>Bridget Jones's Diary is a 1996 novel by Helen Fielding. Written in the form of a personal diary, the novel chronicles a year in the life of Bridget Jones, a thirty-something single working woman living in London. She writes about her career, self-image, vices, family, friends, and romantic relationships.</p>"
       topics:
         - topic-comedic-fiction
@@ -715,7 +713,7 @@ content-type:
     article-thank-you-jeeves:
       title: Thank You, Jeeves
       summary: Thank You, Jeeves is a Jeeves comic novel by P.G. Wodehouse, first published in the United Kingdom on 16 March 1934 by Herbert Jenkins, London, and in the United States on 23 April 1934 by Little, Brown and Company, New York.
-      published: 1934-03-16
+      published: "1934-03-16"
       body: "<p>Thank You, Jeeves is a Jeeves comic novel by P.G. Wodehouse, first published in the United Kingdom on 16 March 1934 by Herbert Jenkins, London, and in the United States on 23 April 1934 by Little, Brown and Company, New York.</p>"
       topics:
         - topic-comedic-fiction
@@ -726,7 +724,7 @@ content-type:
     article-enders-game:
       title: Ender's Game
       summary: Ender's Game is a 1985 military science fiction novel by American author Orson Scott Card.
-      published: 1985-01-01
+      published: "1985-01-01"
       body: "<p>The War of the Worlds is a science fiction novel by English author H. G. Wells, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US. The novel's first appearance in hardcover was in 1898 from publisher William Heinemann of London. Written between 1895 and 1897, it is one of the earliest stories to detail a conflict between mankind and an extra-terrestrial race. The novel is the first-person narrative of both an unnamed protagonist in Surrey and of his younger brother in London as southern England is invaded by Martians. The novel is one of the most commented-on works in the science fiction canon.</p>"
       topics:
         - topic-sci-fi
@@ -738,7 +736,7 @@ content-type:
     article-lion-of-mars:
       title: The Lion of Mars
       summary: Blast off with New York Times bestselling and Newbery Honor-winning Jennifer L. Holm’s out-of-this-world new novel about a kid raised on Mars who learns that he can’t be held back by the fears of the grown-ups around him.
-      published: 2021-01-05
+      published: "2021-01-05"
       body: "<p>Blast off with New York Times bestselling and Newbery Honor-winning Jennifer L. Holm’s out-of-this-world new novel about a kid raised on Mars who learns that he can’t be held back by the fears of the grown-ups around him.</p>"
       topics:
         - topic-sci-fi
@@ -749,7 +747,7 @@ content-type:
     article-13-storey-tree-house:
       title: The 13-Storey Tree House
       summary: The 13-Story Treehouse is a 2011 book written by author Andy Griffiths and illustrated by Terry Denton, and a stage play based on the book.
-      published: 2011-01-01
+      published: "2011-01-01"
       body: "<p>The 13-Story Treehouse is a 2011 book written by author Andy Griffiths and illustrated by Terry Denton, and a stage play based on the book. The story follows Andy and Terry, who are living in a 13-story treehouse, struggling to finish their book on time among many distractions and their friend Jill, who lives in a house full of animals and often visits them. According to the book, the 13-story treehouse has 'a bowling alley, a see-through swimming pool, a tank full of man-eating sharks, a secret underground laboratory, a vegetable vaporizer and a marshmallow machine that shoots marshmallows into your mouths when it sees that you are hungry'.</p>"
       topics:
         - topic-comedic-fiction
@@ -760,7 +758,7 @@ content-type:
     article-hitchhikers-guide-to-the-galaxy:
       title: The Hitchhiker's Guide to the Galaxy
       summary: The Hitchhiker's Guide to the Galaxy (sometimes referred to as HG2G, HHGTTG, H2G2, or tHGttG) is a comedy science fiction series created by Douglas Adams.
-      published: 1978-01-01
+      published: "1978-01-01"
       body: "<p>The Hitchhiker's Guide to the Galaxy (sometimes referred to as HG2G, HHGTTG, H2G2, or tHGttG) is a comedy science fiction series created by Douglas Adams. Originally a 1978 radio comedy broadcast on BBC Radio 4, it was later adapted to other formats, including stage shows, novels, comic books, a 1981 TV series, a 1984 video game, and 2005 feature film.</p>"
       topics:
         - topic-comedic-fiction
@@ -772,7 +770,7 @@ content-type:
     article-cold-comfort-farm:
       title: Cold Comfort Farm
       summary: Cold Comfort Farm is a comic novel by English author Stella Gibbons, published in 1932.
-      published: 1932-09-08
+      published: "1932-09-08"
       body: "<p>Cold Comfort Farm is a comic novel by English author Stella Gibbons, published in 1932. It parodies the romanticised, sometimes doom-laden accounts of rural life popular at the time, by writers such as Mary Webb.</p>"
       topics:
         - topic-comedic-fiction
@@ -791,7 +789,7 @@ content-type:
       audiences:
         - audience-adult
       duration: 2 hours
-      date: 2023-10-26T07:24:38
+      date: "2023-10-26T07:24:38"
 
 menu:
   main:

@@ -285,7 +285,7 @@ content-type:
       type: ref
       field: field_goal
     date:
-      type: date-time
+      type: date
       field: field_event_date
     duration:
       type: text
