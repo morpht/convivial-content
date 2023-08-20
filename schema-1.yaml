@@ -121,6 +121,9 @@ paragraphs:
     definition:
       type: text
       field: field_view_definition
+    hide-heading:
+      type: boolean
+      field: field_hide_heading
 
 
 content-type:
@@ -281,6 +284,12 @@ content-type:
     goal:
       type: ref
       field: field_goal
+    date:
+      type: date-time
+      field: field_event_date
+    duration:
+      type: text
+      field: field_event_duration
 
   person:
     title: content-type-title

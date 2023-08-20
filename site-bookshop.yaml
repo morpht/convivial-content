@@ -390,7 +390,7 @@ content-type:
         -
           type: view
           heading: Search Block
-          block: content_search block_1
+          definition: content_search block_1
           hide-heading: true
     page-articles:
       alias: /news
@@ -553,7 +553,7 @@ content-type:
     article-i-robot:
       title: I, Robot
       summary: I, Robot is a fixup novel of science fiction short stories or essays by American writer Isaac Asimov.
-      published: 1950-12-02
+      published: "1950-12-02"
       body: "<p>I, Robot is a fixup novel of science fiction short stories or essays by American writer Isaac Asimov. The stories originally appeared in the American magazines Super Science Stories and Astounding Science Fiction between 1940 and 1950 and were then compiled into a book for stand-alone publication by Gnome Press in 1950, in an initial edition of 5,000 copies. The stories are woven together by a framing narrative in which the fictional Dr. Susan Calvin tells each story to a reporter (who serves as the narrator) in the 21st century. Although the stories can be read separately, they share a theme of the interaction of humans, robots, and morality, and when combined they tell a larger story of Asimov's fictional history of robotics..</p>"
       topics:
         - topic-sci-fi
@@ -785,10 +785,13 @@ content-type:
     event-x:
       title: Adult Sci-fi article
       body: Article 1 body
+      summary: Example Summary for event.
       topics:
         - topic-sci-fi
       audiences:
         - audience-adult
+      duration: 2 hours
+      date: 2023-10-26T07:24:38
 
 menu:
   main:
