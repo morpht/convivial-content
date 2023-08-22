@@ -3,6 +3,7 @@ schema-version: 1
 vocabulary:
 
   intent:
+  # The name field doesn't need a type a field name as its predefined in Drupal.
     name:
       type: vocabulary-name
     key:
@@ -42,14 +43,10 @@ media:
       type: media-image
       field: field_media_image
 
+
 content-block:
 
-  promotion:
-    name: content-block-name
-    heading:
-      type: text
-      field: field_heading
-
+  # The block content type machine name should be the same in Drupal.
   personified_data:
     info: content-block-info
     endpoint:
@@ -62,11 +59,35 @@ content-block:
       type: paragraphs
       field: field_personified_parameters
 
-paragraphs:
+  promotion:
+    info: micro-content-label
+    heading:
+      type: text
+      field: field_heading
+    promo_type:
+      type: ref
+      field: field_promo_type
+    body:
+      type: html
+      field: field_body
+    keys:
+      type: list
+      field: field_promo_keys
+    image:
+      type: media-image
+      field: field_promo_background
+    variant:
+      type: text
+      field: field_promo_variant
+    position:
+      type: text
+      field: field_promo_position
 
+paragraphs:
+# The paragraph type's machine name should be the same in Drupal.
   parameter:
-    name:   parameter-name
-    default-value:
+    name: parameter-name
+    default:
       type: text
       field: field_parameter_default_value
     endpoint-key:
@@ -79,11 +100,36 @@ paragraphs:
       type: list
       field: field_parameter_source_type
 
+  content_block:
+    heading:
+      type: text
+      field: field_heading
+    body:
+      type: text
+      field: field_body
+    block:
+      type: block_content
+      field: field_cb_block
+    hide-heading:
+      type: boolean
+      field: field_hide_heading
+
+  view:
+    heading:
+      type: text
+      field: field_heading
+    definition:
+      type: text
+      field: field_view_definition
+    hide-heading:
+      type: boolean
+      field: field_hide_heading
+
+
 content-type:
 
   audience:
-    title:
-      type: content-type-title
+    title: content-type-title
     summary:
       type: text
       field: field_summary
@@ -105,10 +151,12 @@ content-type:
     key:
       type: text
       field: field_key
+    search_exclude:
+      type: boolean
+      field: field_search_exclude
 
   topic:
-    title:
-      type: content-type-title
+    title: content-type-title
     summary:
       type: text
       field: field_summary
@@ -124,12 +172,14 @@ content-type:
     components:
       type: paragraphs
       field: field_components
+    key:
+      type: text
+      field: field_key
 
   page:
+    title: content-type-title
     alias:
       type: alias
-    title:
-      type: content-type-title
     summary:
       type: text
       field: field_summary
@@ -139,6 +189,15 @@ content-type:
     introduction:
       type: html
       field: field_introduction
+    banner_image:
+      type: media-image
+      field: field_banner_image
+    header_colour_classes:
+      type: text
+      field: field_header_colour_classes
+    hero_darkness:
+      type: text
+      field: field_hero_darkness
     body:
       type: html
       field: field_body
@@ -162,8 +221,7 @@ content-type:
       field: field_stage
 
   article:
-    title:
-      type: content-type-title
+    title: content-type-title
     summary:
       type: text
       field: field_summary
@@ -179,12 +237,14 @@ content-type:
     components:
       type: paragraphs
       field: field_components
+    # topics field is set to field_about.
     topics:
       type: ref
-      field: field_topics
+      field: field_about
+    # audiences field is set to field_about.
     audiences:
       type: ref
-      field: field_audience
+      field: field_suitable_for
     authors:
       type: ref
       field: field_authored_by
@@ -194,10 +254,12 @@ content-type:
     goal:
       type: ref
       field: field_goal
+    published:
+      type: date
+      field: field_published
 
   event:
-    title:
-      type: content-type-title
+    title: content-type-title
     summary:
       type: text
       field: field_summary
@@ -225,10 +287,15 @@ content-type:
     goal:
       type: ref
       field: field_goal
+    date:
+      type: date
+      field: field_event_date
+    duration:
+      type: text
+      field: field_event_duration
 
   person:
-    title:
-      type: content-type-title
+    title: content-type-title
     summary:
       type: text
       field: field_summary
@@ -241,10 +308,12 @@ content-type:
     body:
       type: html
       field: field_body
+    key:
+      type: text
+      field: field_key
 
   place:
-    title:
-      type: content-type-title
+    title: content-type-title
     summary:
       type: text
       field: field_summary

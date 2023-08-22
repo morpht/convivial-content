@@ -1,3 +1,7 @@
 bookshop:
   name: Bookshop
   file: site-bookshop.yaml
+
+news:
+  name: News
+  file: site-news.yaml

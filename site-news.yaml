@@ -1,0 +1,234 @@
+label: News
+description: "Demo news site."
+key: news
+schema: schema-1
+
+site:
+  name: News Demo
+  homepage: page-home
+  email: test@example.com
+
+theme:
+  logo: "https://source.unsplash.com/random/1920x1080/?logo"
+
+vocabulary:
+
+  intent:
+    intent-signup:
+      name: Signup
+      key: intent-signup
+  stage:
+    stage-orientation:
+      name: Orientation
+      key: stage-orientation
+    stage-discover:
+      name: Discover
+      key: stage-discover
+    stage-validation:
+      name: Validation
+      key: stage-validation
+    stage-conversion:
+      name: Conversion
+      key: stage-conversion
+    stage-converted:
+      name: Converted
+      key: stage-converted
+    stage-continue:
+      name: Continue
+      key: stage-continue
+  goal:
+    goal-booked:
+      name: Booked
+      key: goal-booked
+    goal-subscribed:
+      name: Subscribed
+      key: goal-subscribed
+  campaign:
+    campaign-acquistion:
+      name: Acquisition
+      key: acquisition
+    campaign-education:
+      name: Education
+      key: education
+  promotion_type:
+    promotion-type-next-cta:
+      name: Next CTA
+      key: promotion-type-next-cta
+    promotion-type-season-banner:
+      name: Season banner
+      key: promotion-type-season-banner
+
+media:
+
+  image:
+    image-site:
+      name: News
+      source: "https://source.unsplash.com/random/1920x1080/?newspaper"
+    image-sci-fi:
+      name: Sci-fi
+      source: "https://source.unsplash.com/random/1920x1080/?sci+fi"
+    image-comedic-fiction:
+      name: Comedic-fiction
+      source: "https://source.unsplash.com/random/1920x1080/?comedy"
+    image-fantasy:
+      name: Fantasy
+      source: "https://source.unsplash.com/random/1920x1080/?fantasy"
+    image-youth:
+      name: Youth
+      source: "https://source.unsplash.com/random/1920x1080/?youth"
+    image-adult:
+      name: Adult
+      source: "https://source.unsplash.com/random/1920x1080/?adult"
+    image-summer:
+      name: Summer
+      source: "https://source.unsplash.com/random/1920x1080/?summer"
+    image-autumn:
+      name: Autumn
+      source: "https://source.unsplash.com/random/1920x1080/?autumn"
+    image-winter:
+      name: Winter
+      source: "https://source.unsplash.com/random/1920x1080/?winter"
+    image-spring:
+      name: Spring
+      source: "https://source.unsplash.com/random/1920x1080/?spring"
+    image-articles:
+      name: Articles
+      source: "https://source.unsplash.com/random/1920x1080/?articles"
+    image-events:
+      name: Events
+      source: "https://source.unsplash.com/random/1920x1080/?event"
+    image-people:
+      name: People
+      source: "https://source.unsplash.com/random/1920x1080/?people"
+    image-places:
+      name: Places
+      source: "https://source.unsplash.com/random/1920x1080/?place"
+    image-search:
+      name: Search
+      source: "https://source.unsplash.com/random/1920x1080/?search"
+    image-catalog:
+      name: Catalog
+      source: "https://source.unsplash.com/random/1920x1080/?catalog"
+
+content-block:
+
+# personified_data should be same as the machine name.
+  personified_data:
+    personified-data-audience-tasks:
+      info: 'Audience tasks'
+      endpoint: /data/tasks
+      template: item-image-card
+      parameter:
+        -
+          type: parameter
+          endpoint-key: key
+          source-key: audience
+          source-type: local_storage
+          default: audience-general
+
+    personified-data-topic-news:
+      info: Topic news
+      endpoint: /data/articles-topic
+      template: item-image-card
+      parameter:
+        -
+          type: parameter
+          endpoint-key: key
+          source-key: topic
+          source-type: local_storage
+          default:
+
+    personified-data-season-banner:
+      info: Season banner
+      endpoint: /data/promotion
+      template: item-teaser
+      parameter:
+        -
+          type: parameter
+          endpoint-key: type
+          source-key:
+          source-type: constant
+          default: promotion-type-season-banner    
+        -
+          type: parameter
+          endpoint-key: key
+          source-key: season
+          source-type: local_storage
+          default:
+
+    personified-data-next-cta:
+      info: Next CTA
+      endpoint: /data/promotion
+      template: item-teaser
+      parameter:
+        -
+          type: parameter
+          endpoint-key: type
+          source-key:
+          source-type: constant
+          default: promotion-type-next-cta    
+        -
+          type: parameter
+          endpoint-key: key
+          source-key: next
+          source-type: local_storage
+          default:
+
+content-type:
+
+  audience:
+    audience-youth:
+      title: Youth
+      key: audience-youth
+      thumbnail: image-youth
+      introduction: "<p class=intro>Youth related content.</p>"
+      summary: This is Youth
+      tasks:
+        - audience-youth
+    audience-adult:
+      title: Adult
+      key: audience-adult
+      thumbnail: image-adult
+      introduction: "<p class=intro>Adult related content.</p>"
+      summary: This is Adult
+      tasks:
+        - audience-adult
+
+  topic:
+    topic-sci-fi:
+      title: Sci-fi
+      key: topic-sci-fi
+      thumbnail: image-sci-fi
+      introduction: "<p class=intro>Sci-fi related content.</p>"
+    topic-comedic-fiction:
+      title: Comedic fiction
+      key: topic-comedic-fiction
+      thumbnail: image-comedic-fiction
+      introduction: "<p class=intro>Comedic fiction related content.</p>"
+    topic-fantasy:
+      title: Fantasy
+      key: topic-fantasy
+      thumbnail: image-fantasy
+      introduction: "<p class=intro>Fantasy related content.</p>"
+  
+  page:
+    page-home:
+      alias: /
+      title: News
+      summary: News demo.
+      body: This is the body of the News Demo Page node.
+      thumbnail: image-site
+      introduction: "<p class=intro>A personalized News Site.</p>"
+      components:
+        -
+          type: content_block
+          block: personified-data-audience-tasks
+          heading: Audience tasks
+        -
+          type: content_block
+          block: personified-data-topic-news    
+          heading: Topic news
+        -
+          type: content_block
+          block: personified-data-season-banner 
+          heading: Season Banner
