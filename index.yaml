@@ -2,6 +2,10 @@ bookshop:
   name: Bookshop
   file: site-bookshop.yaml
 
+umami:
+  name: Umami
+  file: site-umami.yaml
+
 news:
   name: News
   file: site-news.yaml
