@@ -31,6 +31,18 @@ media:
     image-recipe:
       name: Recipe
       source: https://source.unsplash.com/random/1920x1080/?food
+    image-pasta:
+      name: Pasta
+      source: https://source.unsplash.com/random/1920x1080/?pasta
+
+content-block:
+  content:
+    content-umami-home-banner:
+      info: Umami Home Banner
+      heading: Super easy vegetarian pasta bake
+      body: "<p> A wholesome pasta bake is the ultimate comfort food. This delicious bake is super quick to prepare and an ideal midweek meal for all the family. </p> <p> <a href=\"/super-easy-vegetarian-pasta-bake\">Read More</a> </p>"
+      colour_classes: cp cp--standard
+
 
 content-type:
   page:
@@ -44,6 +56,10 @@ content-type:
       banner_title: "Hello!"
       header_colour_classes: cp cp--dark
       hero_darkness: hero-background--dark-image
+      components:
+        -
+          type: content_block
+          block: content-umami-home-banner
       layout: page_landing
     page-about:
       alias: /about
@@ -57,6 +73,10 @@ content-type:
       title: Thai green curry
       thumbnail: image-recipe
       body: <ol> <li> In a large wok, brown the chicken until golden, then turn the heat down and gently cook the garlic. Add the chopped green beans and stir. </li> <li> Add the coconut milk, green curry paste and fish sauce. Mix well and slowly simmer. </li> <li> Add the chopped mushrooms and simmer until the chicken (or tofu) is cooked. </li> <li> Serve with jasmine rice and a sprinkle of coriander. </li> </ol>
+    page-super-easy-vegetarian-pasta-bake:
+      title: Super easy vegetarian pasta bake
+      thumbnail: image-pasta
+      body: <ol> <li> In a large pan, boil the pasta in plenty of water until cooked. </li> <li> Whilst the pasta is cooking, chop the onion and gently fry it with the garlic in a little oil until soft and the onion looks clear. </li> <li> Add the vegetarian sausages. Once browned, remove and chop into chunky bites. </li> <li> Pop the sausages back into the pan and add the tomatoes, sugar, pesto and sun dried tomatoes. Season to taste. Simmer until most of the water from the chopped tomatoes has gone. </li> <li> Drain the pasta and add to the pan with the sausages and tomatoes. Stir in half of the cheddar and transfer to a shallow dish. Sprinkle with the rest of the cheddar and dot the sliced mozzarella over the top. </li> <li> Grill for 10 minutes or until the cheese has melted and started to brown. Serve with basil leaves. </li> </ol>
 
 
   article:

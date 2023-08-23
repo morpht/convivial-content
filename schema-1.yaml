@@ -60,7 +60,7 @@ block_content:
       field: field_personified_parameters
 
   promotion:
-    info: micro-content-label
+    info: promotion-info
     heading:
       type: text
       field: field_heading
@@ -82,6 +82,18 @@ block_content:
     position:
       type: text
       field: field_promo_position
+  content:
+    info: contact-info
+    heading:
+      type: text
+      field: field_heading
+    body:
+      type: html
+      field: body
+    colour_classes:
+      type: list
+      field: field_c_colour_classes
+
 
 paragraph:
 # The paragraph type's machine name should be the same in Drupal.
