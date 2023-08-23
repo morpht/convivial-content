@@ -39,10 +39,12 @@ content-type:
       title: Umami
       summary: "Umami - A Food Magazine."
       thumbnail: image-site
-      introduction: "<h2>Hello! Welcome to the Umami - A Food Magazine</h2>"
+      introduction: "<h2> Welcome to the Umami </h2> <p> A Food Magazine </p>"
       banner_image: image-site
+      banner_title: "Hello!"
       header_colour_classes: cp cp--dark
       hero_darkness: hero-background--dark-image
+      layout: page_landing
     page-about:
       alias: /about
       title: About Umami

@@ -342,10 +342,12 @@ node:
       title: Bookshop
       summary: Convivial Demo is a Drupal demo site produced by Morpht which offers advanced personalization features out of the box.
       thumbnail: image-site
-      introduction: "<h2>Hello! Welcome to the Convivial CXP demo</h2><p class=\"introduction\">Convivial CXP is a personalisation enabled content experience platform built on Drupal. This is a \"bookshop\" demonstration site, showcasing many of its features.</p><p class=\"introduction\">Convivial CXP is a lightweight composable, personalisation solution for those looking for an alternative to heavier stacks which require vendor lock in.</p>"
+      introduction: "<p class=\"introduction\">Convivial CXP is a personalisation enabled content experience platform built on Drupal. This is a \"bookshop\" demonstration site, showcasing many of its features.</p><p class=\"introduction\">Convivial CXP is a lightweight composable, personalisation solution for those looking for an alternative to heavier stacks which require vendor lock in.</p>"
+      banner_title: "Hello! Welcome to the Convivial CXP demo"
       banner_image: image-site
       header_colour_classes: cp cp--dark
       hero_darkness: hero-background--dark-image
+      layout: page_landing
       components:
         -
           type: content_block

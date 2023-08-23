@@ -192,6 +192,9 @@ node:
     banner_image:
       type: media-image
       field: field_banner_image
+    banner_title:
+      type: text
+      field: field_banner_title
     header_colour_classes:
       type: text
       field: field_header_colour_classes
@@ -219,6 +222,9 @@ node:
     stage:
       type: ref
       field: field_stage
+    layout:
+      type: text
+      field: layout_selection
 
   article:
     title: content-type-title
