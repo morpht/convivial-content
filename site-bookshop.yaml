@@ -359,6 +359,7 @@ node:
         -
           type: content_block
           block: personified-data-season-banner
+          style_classes: breakout no-side-gaps
     page-tac:
       alias: /tac
       title: Terms and Conditions

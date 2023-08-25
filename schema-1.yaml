@@ -125,6 +125,9 @@ paragraph:
     hide-heading:
       type: boolean
       field: field_hide_heading
+    style_classes:
+      type: list
+      field: field_cb_style_classes
 
   view:
     heading:
