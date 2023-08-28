@@ -68,7 +68,7 @@ media:
       name: Deep mediterranean quiche
       source: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/profiles/demo_umami/modules/demo_umami_content/default_content/images/mediterranean-quiche-umami.jpg
 
-content-block:
+block_content:
   content:
     content-umami-home-banner:
       info: Umami Home Banner
@@ -77,7 +77,7 @@ content-block:
       colour_classes: cp cp--standard
 
 
-content-type:
+node:
   page:
     page-home:
       alias: /
