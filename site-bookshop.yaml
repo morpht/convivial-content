@@ -11,7 +11,7 @@ site:
 theme:
   logo: "https://source.unsplash.com/random/1920x1080/?logo"
 
-vocabulary:
+taxonomy_term:
 
   intent:
     intent-signup:
@@ -110,7 +110,7 @@ media:
       name: Catalog
       source: "https://source.unsplash.com/random/1920x1080/?catalog"
 
-content-block:
+block_content:
 
 # personified_data should be same as the machine name.
   personified_data:
@@ -285,7 +285,7 @@ content-block:
       position: banner--content-left
 
 
-content-type:
+node:
 
   audience:
     audience-general:
