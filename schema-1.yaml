@@ -60,7 +60,7 @@ block_content:
       field: field_personified_parameters
 
   promotion:
-    info: micro-content-label
+    info: promotion-info
     heading:
       type: text
       field: field_heading
@@ -82,6 +82,18 @@ block_content:
     position:
       type: text
       field: field_promo_position
+  content:
+    info: contact-info
+    heading:
+      type: text
+      field: field_heading
+    body:
+      type: html
+      field: body
+    colour_classes:
+      type: list
+      field: field_c_colour_classes
+
 
 paragraph:
 # The paragraph type's machine name should be the same in Drupal.
@@ -113,6 +125,9 @@ paragraph:
     hide-heading:
       type: boolean
       field: field_hide_heading
+    style_classes:
+      type: list
+      field: field_cb_style_classes
 
   view:
     heading:
@@ -192,6 +207,9 @@ node:
     banner_image:
       type: media-image
       field: field_banner_image
+    banner_title:
+      type: text
+      field: field_banner_title
     header_colour_classes:
       type: text
       field: field_header_colour_classes
@@ -219,6 +237,9 @@ node:
     stage:
       type: ref
       field: field_stage
+    layout:
+      type: text
+      field: layout_selection
 
   article:
     title: content-type-title
