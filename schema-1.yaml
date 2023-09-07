@@ -21,12 +21,6 @@ taxonomy_term:
     key:
       type: text
       field: field_key
-  campaign:
-    name:
-      type: vocabulary-name
-    key:
-      type: text
-      field: field_key
   promotion_type:
     name:
       type: vocabulary-name

@@ -45,13 +45,6 @@ taxonomy_term:
     goal-subscribed:
       name: Subscribed
       key: goal-subscribed
-  campaign:
-    campaign-acquistion:
-      name: Acquisition
-      key: acquisition
-    campaign-education:
-      name: Education
-      key: education
   promotion_type:
     promotion-type-next-cta:
       name: Next CTA
