@@ -281,6 +281,11 @@ block_content:
         - none
       variant: banner--box
       position: banner--content-left
+  content:
+    convivial-cxp-footer:
+      info: Convivial CXP Footer
+      heading: Convivial CXP
+      body: "<p>© 2020 - 2023 <a href=\"https://www.morpht.com/\" rel=\"external\">Morpht</a>. <a href=\"/privacy\">Privacy policy</a>&nbsp;<a href=\"/terms-and-conditions\">Terms &amp; conditions</a></p>"
 
 
 node:
@@ -825,7 +830,5 @@ menu:
 
 region:
 
-  logo:
-    - system_branding_block
   footer_content:
-    - menu_block:footer
+    - convivial-cxp-footer
