@@ -360,7 +360,7 @@ node:
           type: content_block
           block: personified-data-topic-news
           heading: Topic news
-          colour-palette: cp cp--light|
+          colour-palette: cp cp--light
         -
           type: content_block
           block: personified-data-season-banner
