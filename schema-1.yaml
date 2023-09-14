@@ -87,6 +87,32 @@ block_content:
     colour_classes:
       type: list
       field: field_c_colour_classes
+  logo:
+    info: logo-info
+    logo-large-default:
+      type: file
+      field: field_logo_large_default
+    logo-large-inverse:
+      type: file
+      field: field_logo_large_inverse
+    logo-small-default:
+      type: file
+      field: field_logo_small_default
+    logo-small-inverse:
+      type: file
+      field: field_logo_small_inverse
+    logo-link:
+      type: link
+      field: field_logo_link
+    logo-large-width:
+      type: number
+      field: field_logo_large_width
+    logo-small-width:
+      type: number
+      field: field_logo_small_width
+    logo-breakpoint:
+      type: number
+      field: field_logo_small_width
 
 
 paragraph:
