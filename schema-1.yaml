@@ -113,6 +113,11 @@ block_content:
     logo-breakpoint:
       type: number
       field: field_logo_breakpoint
+  search:
+    info: search-info
+    search-body:
+      type: html
+      field: body
 
 
 paragraph:

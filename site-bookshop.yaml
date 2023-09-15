@@ -298,6 +298,11 @@ block_content:
       logo-small-width: 250
       logo-breakpoint: 991
 
+  search:
+    search-site-wide:
+      info: Search form (sitewide)
+      search-body: "<form class=\"searchform\" accept-charset=\"UTF-8\" action=\"/search\" method=\"get\">    <p>        <input class=\"searchform__query\" aria-label=\"What are you looking for?\" autocomplete=\"off\" maxlength=\"128\" name=\"keys\" placeholder=\"What are you looking for?\" type=\"text\">        <button class=\"btn searchform__button\" type=\"submit\" value=\"Search\">Search</button>    </p></form>"
+
 
 node:
 
@@ -842,5 +847,9 @@ menu:
 region:
   logo:
     - logo-site-logo
+  search:
+    - search-site-wide
+  search_mobile:
+    - search-site-wide
   footer_content:
     - content-convivial-cxp-footer
