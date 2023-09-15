@@ -282,10 +282,21 @@ block_content:
       variant: banner--box
       position: banner--content-left
   content:
-    convivial-cxp-footer:
+    content-convivial-cxp-footer:
       info: Convivial CXP Footer
       heading: Convivial CXP
       body: "<p>© 2020 - 2023 <a href=\"https://www.morpht.com/\" rel=\"external\">Morpht</a>. <a href=\"/privacy\">Privacy policy</a>&nbsp;<a href=\"/terms-and-conditions\">Terms &amp; conditions</a></p>"
+  logo:
+    logo-site-logo:
+      info: Logo
+      logo-large-default: "assets/logo/bookshop-logo.png"
+      logo-large-inverse: "assets/logo/bookshop-logo--inverse.png"
+      logo-small-default: "assets/logo/bookshop-logo--small.png"
+      logo-small-inverse: "assets/logo/bookshop-logo--small-inverse.png"
+      logo-link: <front>
+      logo-large-width: 350
+      logo-small-width: 250
+      logo-breakpoint: 991
 
 
 node:
@@ -829,6 +840,7 @@ menu:
     - page-privacy
 
 region:
-
+  logo:
+    - logo-site-logo
   footer_content:
-    - convivial-cxp-footer
+    - content-convivial-cxp-footer

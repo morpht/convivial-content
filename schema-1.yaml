@@ -112,7 +112,7 @@ block_content:
       field: field_logo_small_width
     logo-breakpoint:
       type: number
-      field: field_logo_small_width
+      field: field_logo_breakpoint
 
 
 paragraph:
