@@ -7,11 +7,9 @@ site:
   name: Bookshop Demo
   homepage: page-home
   slogan: Convivial CXP
-  email: contact+convivial-demo-bookshop@morpht.com
 
 theme:
   name: 'convivial_bootstrap'
-  logo: "https://source.unsplash.com/random/1920x1080/?logo"
 
 taxonomy_term:
 
