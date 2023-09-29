@@ -9,7 +9,7 @@ site:
   email: test@example.com
 
 theme:
-  logo: "https://source.unsplash.com/random/1920x1080/?logo"
+  name: 'convivial_bootstrap'
 
 taxonomy_term:
 
