@@ -9,7 +9,7 @@ site:
   email: contact+convivial-demo-bookshop@morpht.com
 
 theme:
-  logo: "https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/profiles/demo_umami/themes/umami/logo.svg"
+  name: 'convivial_bootstrap'
 
 media:
   image:
